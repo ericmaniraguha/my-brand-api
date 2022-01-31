@@ -1,6 +1,7 @@
 {
   "name": "my-brand-api",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,24 +10,24 @@
     "dev": "better-npm-run dev",
     "test": "better-npm-run test"
   },
-  "betterScripts":{
+  "betterScripts": {
     "dev": {
-      "command":"nodemon --exec babel-node ./src/app.js",
-      "env":{
+      "command": "nodemon ./src/app.js",
+      "env": {
         "NODE_ENV": "development",
         "PORT": 3000
       }
     },
     "test": {
-      "command":"nodemon --exec babel-node ./src/app.js",
-      "env":{
+      "command": "nodemon ./src/app.js",
+      "env": {
         "NODE_ENV": "test",
         "PORT": 5000
       }
     },
     "prod": {
-      "command":"node ./dist/app.js",
-      "env":{
+      "command": "node ./dist/app.js",
+      "env": {
         "NODE_ENV": "production"
       }
     }
@@ -43,19 +44,22 @@
   },
   "homepage": "https://github.com/CYIMANA-Faisal/my-brand-api#readme",
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.16.10",
+    "@babel/register": "^7.16.9",
+    "better-npm-run": "^0.1.1",
+    "cloudinary": "^1.28.1",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.8",
+    "multer": "^1.4.4",
+    "uuidv4": "^6.2.12"
+  },
+  "devDependencies": {
     "@babel/cli": "^7.16.8",
     "@babel/core": "^7.16.12",
     "@babel/node": "^7.16.8",
-    "@babel/plugin-proposal-class-properties": "^7.16.7",
-    "@babel/plugin-transform-runtime": "^7.16.10",
     "@babel/preset-env": "^7.16.11",
-    "@babel/register": "^7.16.9",
-    "better-npm-run": "^0.1.1",
-    "dotenv": "^14.3.2",
-    "express": "^4.17.2",
-    "mongoose": "^6.1.8"
-  },
-  "devDependencies": {
     "nodemon": "^2.0.15"
   }
 }

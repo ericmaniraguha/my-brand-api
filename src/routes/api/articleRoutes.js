@@ -1,9 +1,25 @@
 import express from 'express'
+import { ArticleController } from './../../controllers/articleController.js'
+import multer from 'multer'
+
 
 const route = express.Router()
+const storage = multer.diskStorage({});
+const fileFilter = (req, file, cb) => {
+    if (file.mimetype.startsWith('image')) {
+        cb(null, true);
+    } else {
+        cb('invalid image file!', false);
+    }
+};
 
-route.get('/', (req, res, next) => {
-    res.status(200).json({ status: 200, message: "this will return all articles", data: "" })
-})
+const uploads = multer({ storage, fileFilter });
+const articleControllers = new ArticleController()
+
+route.post('/', uploads.single('image'), articleControllers.createArticle)
+route.get('/', articleControllers.getAllArticles)
+route.get('/:id', articleControllers.getArticle)
+route.patch('/:id', articleControllers.updateArticle)
+route.delete('/:id', articleControllers.deleteArticle)
 
 export default route
