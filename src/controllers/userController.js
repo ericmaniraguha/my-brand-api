@@ -1,68 +1,74 @@
-import { createUserService, getAllUsersService, getOneUserService, updateUser, deleteUser } from "../services/userServices.js"
-export class UserController {
+import { uploadFile } from "../helpers/fileUpload.js"
+import { generateToken } from "../helpers/jwtFunctions.js"
+import { comparePassword, hashPassword } from "../helpers/passwordSecurity.js"
+import { userExist, createUser, updateUser } from "../services/userServices.js"
 
-    async createUser(req, res, next) {
+export class UserControllers {
+    async register(req, res) {
         try {
-            const data = {
-                username: req.body.username,
-                email: req.body.email,
-                password: req.body.password
+            const exist = await userExist(req.body.email)
+            if (exist) {
+                res.status(409).json({ status: 409, message: "User with this email already exist." })
+            } else {
+                if (req.file) {
+                    req.body.picture = await uploadFile(req)
+                } else {
+                    req.body.picture = 'https://www.pngkey.com/png/detail/115-1150152_default-profile-picture-avatar-png-green.png'
+                }
+                const user = {
+                    username: req.body.username,
+                    email: req.body.email,
+                    password: await hashPassword(req.body.password),
+                    picture: req.body.picture,
+                }
+                const createdUser = await createUser(user)
+                res.status(201).json({ status: 201, message: "user registered successfully", user: createdUser })
             }
-            console.log(data)
-            const user = await createUserService(data)
-            res.status(200).json({ status: 200, message: "User created successfully", data: user })
         } catch (error) {
-            console.log(error)
+            res.status(500).json({message: "Internal server error!"})
         }
     }
-     // retrieve one user--
-     async getAllUsers(req, res, next) {
+    async login(req, res) {
         try {
-            const users = await getAllUsersService()
-            res.status(200).json({ status: 200, message: "These are all the users", data: users })
-        } catch (error) {
-            console.log(error)
-        }
-    }
-    
-    async getUser(req, res, next) {
-        try {
-            const user = await getOneUserService(req.params.id)
-            res.status(200).json({ status: 200, message: "user retieved successfully", data: user })
-        } catch (error) {
-            console.log(error)
-        }
-    }
-     // update user
-     async updateUser(req, res, next) {
-        try {
-            const data = {}
-            if (req.body.username) {
-                data['username'] = req.body.username
+            const exist = await userExist(req.body.email)
+            if (exist) {
+                const valid = await comparePassword(req.body.password, exist.password)
+                if (!valid) {
+                    res.status(403).json({ status: 403, message: "Invalid credentials" })
+                }
+                const token = await generateToken({ id: exist._id })
+                res.status(200).json({ status: 200, message: "Logged in successfully", accessToken: token })
+            } else {
+                res.status(403).json({ status: 403, message: "Invalid credentials" })
             }
-            if (req.body.email) {
-                data['email'] = req.body.email
-            }
-            if (req.body.password) {
-                data['password'] = req.body.password
-            }
-            const user = await updateUser(req.params.id, data)
-            res.send(`username has been updated to ${req.body.username} , has been updated to ${req.body.email}`)
 
         } catch (error) {
-            res.status(404)
-            res.send({ error: "User does not exist...!" })
-        }
-    } // delete user
-    async deleteUser(req, res, next) {
-        try {
-            await deleteUser(req.params.id)
-            res.send(`User ${req.params.id} is deleted`)
-        } catch (error) {
-            res.status(404)
-            res.send({ error: "User not found!" })
-            console.log(error)
+            res.status(500).json({message: "Internal server error!"})
         }
     }
 
+    async updateUserInfo(req,res){
+        try {
+            
+                if (req.file) {
+                    req.body.picture = await uploadFile(req)
+                }
+                if(req.body.password){
+                    var hashP= hashPassword(req.body.password)
+                }
+                const user = {
+                    username: req.body.username,
+                    email: req.body.email,
+                    password: hashP,
+                    picture: req.body.picture,
+                }
+               
+                const updatedUser = await updateUser(req.params.email,user)
+                res.status(201).json({ status: 201, message: "user info updated successfully", user: updatedUser })
+
+            }
+         catch (error) {
+            res.status(500).json({message: "Internal server error!"})
+        }
+    }
 }

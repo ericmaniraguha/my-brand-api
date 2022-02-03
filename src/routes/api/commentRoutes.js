@@ -1,12 +1,10 @@
-import express from 'express'
-import { CommentController } from './../../controllers/commentController.js'
+import  express  from "express";
+
+import { CommentController } from './../../controllers/commentsController.js'
 
 const route = express.Router()
-
-const commentControllers = new CommentController()
-
-route.post('/', commentControllers.createComment)
-route.get('/', commentControllers.getAllComments)
-
+const commentsControllers = new CommentController()
+route.post('/:articleId', commentsControllers.createComment)
+route.get('/:articleId', commentsControllers.getAllArticleComments)
 
 export default route
