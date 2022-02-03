@@ -1,7 +1,6 @@
 import Article from "../models/article.js";
 
 export const createArticleService = async (data) => {
-
     const article = await Article(data)
     article.save()
     return article
@@ -17,26 +16,18 @@ export const getOneArticleService = async (id) => {
     return article
 }
 
-// update function
-export const updateArticle = async (id, data) => {
-
-    const article = await Article.findOne({ _id: id })
-    console.log(article)
-    if (data.title) {
-        article.title = data.title
-    }
-    if (data.content) {
-        article.content = data.content
-    }
-    if (data.image) {
-        article.image = data.image
-    }
-    await article.save()
-    return article
+export const updateArticleService =async (id,articleUpdate) =>{
+    const updatedArticle = await Article.findOneAndUpdate({ _id: id }, articleUpdate, { new: true });
+    return updatedArticle
+    
 }
 
-//delete function
-export const deleteArticle = async (id) => {
-    return await Article.deleteOne({ _id: id })
+export const deleteArticleService =async (id) =>{
+    const deletedArticle = await Article.findByIdAndDelete(id)
+    if(deletedArticle){
+        return "Article deleted successfully"
+    } else{
+        return "Article does not exists"
+    }
+    
 }
-

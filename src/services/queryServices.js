@@ -1,8 +1,6 @@
 import Query from "../models/query.js";
 
-
 export const createQueryService = async (data) => {
-
     const query = await Query(data)
     query.save()
     return query
@@ -18,7 +16,12 @@ export const getOneQueryService = async (id) => {
     return query
 }
 
-export const deleteQuery = async (id) => {
-    return await Query.deleteOne({ _id: id })
+export const deleteQueryService =async (id) =>{
+    const deletedQuery = await Query.findByIdAndDelete(id)
+    if(deletedQuery){
+        return "Query deleted successfully"
+    } else{
+        return "Query does not exists"
+    }
+    
 }
-
