@@ -16,7 +16,7 @@
       "command": "nodemon --exec babel-node ./src/app.js",
       "env": {
         "NODE_ENV": "development",
-        "PORT": 3000
+        "PORT": 4000
       }
     },
     "test": {
