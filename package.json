@@ -53,7 +53,15 @@
     "express": "^4.17.2",
     "mongoose": "^6.1.8",
     "multer": "^1.4.4",
+<<<<<<< Updated upstream
     "uuidv4": "^6.2.12"
+=======
+    "swagger": "^0.7.5",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.3.0",
+    "validator": "^13.7.0",
+    "yamljs": "^0.3.0"
+>>>>>>> Stashed changes
   },
   "devDependencies": {
     "@babel/cli": "^7.16.8",
