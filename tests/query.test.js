@@ -58,7 +58,7 @@ describe("QUERY END-POINT TESTING", () => {
     })
 
     it("Should not retrieve the queries",  (done) => {
-        chai.request(app).get("/api/v1/qeuries/")
+        chai.request(app).get("/api/v1/qeury/")
         .send()
         .end((err,res)=>{
         expect(res).to.have.status([404])
