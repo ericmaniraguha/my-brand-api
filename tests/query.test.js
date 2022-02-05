@@ -3,6 +3,7 @@ import chaiHttp from 'chai-http'
 import app from '../src/app.js'
 import 'dotenv/config';
 import { userData, validUser, invalidUser} from './dummyData.js';
+import { postData } from './dummyData.js';
 import User from "./../src/models/user.js"
 
 chai.use(chaiHttp)
@@ -81,3 +82,21 @@ describe("QUERY END-POINT TESTING", () => {
             done();
         });
 });
+
+  //adding articles while logged in
+//   it("should add article while logged in", (done) => {
+//     let articleId = ''
+//     chai.request(app)
+//         .post("/api/v1/articles")
+//         .set("Authorization", `Bearer ${token}`)
+//         .send(postData)
+//         .end((req, res) => {
+//             articleId = res.body.data._id
+//             expect(res).to.have.status([200])
+//             expect(res.body).to.have.property("message")
+//             expect(res.body).to.have.property("data")
+//             expect(res.body).to.be.a('object')
+//             done();
+
+//         });
+// });

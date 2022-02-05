@@ -1,6 +1,6 @@
 import mongoose from "mongoose"
 const schema = mongoose.Schema({
-    commenter: String,
+    name: String,
     comment: String,
     create_at: {
         type: Date,

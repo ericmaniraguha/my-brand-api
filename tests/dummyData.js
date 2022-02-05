@@ -16,6 +16,11 @@ export const userData = {
 };
 
 export const comment={
-  commenter:"Honore",
-  comment:"Check check"
+  name:"Mr. Kamaro",
+  comment:"done here"
+}
+
+export const postData = {
+  title: "HMr. Kagabo great Person",
+  content: "I will be here for you....",
 }

@@ -5,7 +5,7 @@ export class CommentController {
         try {
         
             const data = {
-                commenter: req.body.commenter,
+                name: req.body.name,
                 comment: req.body.comment,
             }
             console.log(data)
