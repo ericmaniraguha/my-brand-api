@@ -2,7 +2,7 @@ import chai, { expect } from 'chai'
 import chaiHttp from 'chai-http'
 import app from '../src/app.js'
 import 'dotenv/config';
-import { userData, validUser } from './dummyData.js';
+import { userData, validUser, invalidUser} from './dummyData.js';
 import User from "./../src/models/user.js"
 
 chai.use(chaiHttp)
@@ -66,3 +66,18 @@ describe("QUERY END-POINT TESTING", () => {
     
     })
 })
+
+ //should not log the user in 
+
+ it("It should not loggin the user", (done) => {
+    chai
+        .request(app)
+        .post("/api/v1/users/login")
+        .send(invalidUser)
+        .end((err, res) => {
+            expect(res).status([403])
+            expect(res.body).to.have.property("message");
+
+            done();
+        });
+});
