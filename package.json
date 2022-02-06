@@ -49,10 +49,6 @@
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/register": "^7.17.0",
-<<<<<<< HEAD
-    "babel-cli": "^6.26.0",
-=======
->>>>>>> ft-my-brand-api-test-3
     "bcrypt": "^5.0.1",
     "better-npm-run": "^0.1.1",
     "cloudinary": "^1.28.1",
@@ -61,35 +57,22 @@
     "express": "^4.17.2",
     "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
-<<<<<<< HEAD
-    "mongoose": "^6.2.0",
-    "mongoose-list": "^0.2.2",
-    "multer": "^1.4.4",
-=======
     "lowdb": "^3.0.0",
     "mongoose": "^6.2.0",
     "mongoose-list": "^0.2.2",
     "morgan": "^1.10.0",
     "multer": "^1.4.4",
     "nanoid": "^3.2.0",
->>>>>>> ft-my-brand-api-test-3
     "swagger": "^0.7.5",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.3.0",
     "validator": "^13.7.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "@babel/core": "^7.16.12",
-=======
->>>>>>> ft-my-brand-api-test-3
     "@babel/node": "^7.16.8",
     "@babel/plugin-transform-object-assign": "^7.16.7",
     "@babel/preset-env": "^7.16.11",
-<<<<<<< HEAD
-=======
     "babel-loader": "^8.2.3",
->>>>>>> ft-my-brand-api-test-3
     "chai": "^4.3.6",
     "chai-http": "^4.3.0",
     "coveralls": "^3.1.1",

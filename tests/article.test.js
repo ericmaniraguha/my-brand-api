@@ -4,10 +4,6 @@ import app from '../src/app.js'
 import 'dotenv/config';
 import Article from "./../src/models/article.js"
 
-<<<<<<< HEAD
-// const all = Article.find()
-// let articleId=all[0]._id;
-=======
 let articleId
 
 const getArticleId= async ()=>{
@@ -19,7 +15,6 @@ const getArticleId= async ()=>{
 (async ()=>{
     articleId=await getArticleId()
 })()
->>>>>>> ft-my-brand-api-test-3
 
 chai.use(chaiHttp)
 describe("ARTICLE END-POINT TESTING", () => {
@@ -44,21 +39,6 @@ describe("ARTICLE END-POINT TESTING", () => {
     })
 })
 
-<<<<<<< HEAD
-// it("Should  retrieve the article by id", (done) => {
-//     chai
-//         .request(app)
-//         .get(`/api/v1/articles/${articleId}`)
-//         .send()
-//         .end((err, res) => {
-//             expect(res).to.have.status([200]);
-//             expect(res).to.have.property("status");
-//             expect(res.body).to.have.property("message");
-//             expect(res.body).to.have.property("data");
-//             done();
-//         });
-// });
-=======
 it("Should  retrieve the article by id", (done) => {
     chai
         .request(app)
@@ -72,7 +52,6 @@ it("Should  retrieve the article by id", (done) => {
             done();
         });
 });
->>>>>>> ft-my-brand-api-test-3
 
     // DELETE AN ARTICLE
     // it("Should  not delete the article by id", (done) => {
