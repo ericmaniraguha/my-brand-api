@@ -4,8 +4,17 @@ import app from '../src/app.js'
 import 'dotenv/config';
 import Article from "./../src/models/article.js"
 
-// const all = Article.find()
-// let articleId=all[0]._id;
+let articleId
+
+const getArticleId= async ()=>{
+    const all = await Article.find()
+    let id=all[0]._id;
+    return id
+}
+
+(async ()=>{
+    articleId=await getArticleId()
+})()
 
 chai.use(chaiHttp)
 describe("ARTICLE END-POINT TESTING", () => {
@@ -30,19 +39,19 @@ describe("ARTICLE END-POINT TESTING", () => {
     })
 })
 
-// it("Should  retrieve the article by id", (done) => {
-//     chai
-//         .request(app)
-//         .get(`/api/v1/articles/${articleId}`)
-//         .send()
-//         .end((err, res) => {
-//             expect(res).to.have.status([200]);
-//             expect(res).to.have.property("status");
-//             expect(res.body).to.have.property("message");
-//             expect(res.body).to.have.property("data");
-//             done();
-//         });
-// });
+it("Should  retrieve the article by id", (done) => {
+    chai
+        .request(app)
+        .get(`/api/v1/articles/${articleId}`)
+        .send()
+        .end((err, res) => {
+            expect(res).to.have.status([200]);
+            expect(res).to.have.property("status");
+            expect(res.body).to.have.property("message");
+            expect(res.body).to.have.property("data");
+            done();
+        });
+});
 
     // DELETE AN ARTICLE
     // it("Should  not delete the article by id", (done) => {

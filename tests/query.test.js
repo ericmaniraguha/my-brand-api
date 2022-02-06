@@ -84,19 +84,19 @@ describe("QUERY END-POINT TESTING", () => {
 });
 
   //adding articles while logged in
-//   it("should add article while logged in", (done) => {
-//     let articleId = ''
-//     chai.request(app)
-//         .post("/api/v1/articles")
-//         .set("Authorization", `Bearer ${token}`)
-//         .send(postData)
-//         .end((req, res) => {
-//             articleId = res.body.data._id
-//             expect(res).to.have.status([200])
-//             expect(res.body).to.have.property("message")
-//             expect(res.body).to.have.property("data")
-//             expect(res.body).to.be.a('object')
-//             done();
+  it("should add article while logged in", (done) => {
+    let articleId = ''
+    chai.request(app)
+        .post("/api/v1/articles")
+        .set("Authorization", `Bearer ${token}`)
+        .send(postData)
+        .end((req, res) => {
+            articleId = res.body.data._id
+            expect(res).to.have.status([200])
+            expect(res.body).to.have.property("message")
+            expect(res.body).to.have.property("data")
+            expect(res.body).to.be.a('object')
+            done();
 
-//         });
-// });
+        });
+});

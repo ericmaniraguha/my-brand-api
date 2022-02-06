@@ -1,0 +1,29 @@
+
+{
+    "swagger": "2.0",
+"info":{
+   "title": "API",
+   "description": "API",
+   "version": "1.0.0"
+},
+"servers":[
+    {
+      "url": "http://localhost:4000",
+      "name": "DEV"
+    }
+],
+"path":{
+    "/":{
+        "get":{
+            "tags":["Home"],
+            "summary":"Home",
+            "descriptionId":"getHome",
+            "responses":{
+                "200":{
+                    "description":"Success"
+                }
+            }
+        }
+    }
+}
+}
