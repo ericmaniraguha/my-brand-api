@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // import chai, { expect } from 'chai'
 // import chaiHttp from 'chai-http'
 // import app from '../src/app.js'
@@ -45,7 +45,7 @@
 //     })
 //     })
 // })
-=======
+
 import chai, { expect } from 'chai'
 import chaiHttp from 'chai-http'
 import app from '../src/app.js'
@@ -100,4 +100,4 @@ describe("COMMENT END-POINT TESTING", () => {
     })
     })
 })
->>>>>>> ft-my-brand-api-test-3
+

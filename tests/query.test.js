@@ -58,11 +58,11 @@ describe("QUERY END-POINT TESTING", () => {
     })
 
     it("Should not retrieve the queries",  (done) => {
-<<<<<<< HEAD
+
         chai.request(app).get("/api/v1/qeury/")
-=======
+
         chai.request(app).get("/api/v1/qeuries/")
->>>>>>> ft-my-brand-api-test-3
+
         .send()
         .end((err,res)=>{
         expect(res).to.have.status([404])
@@ -88,24 +88,6 @@ describe("QUERY END-POINT TESTING", () => {
 });
 
   //adding articles while logged in
-<<<<<<< HEAD
-//   it("should add article while logged in", (done) => {
-//     let articleId = ''
-//     chai.request(app)
-//         .post("/api/v1/articles")
-//         .set("Authorization", `Bearer ${token}`)
-//         .send(postData)
-//         .end((req, res) => {
-//             articleId = res.body.data._id
-//             expect(res).to.have.status([200])
-//             expect(res.body).to.have.property("message")
-//             expect(res.body).to.have.property("data")
-//             expect(res.body).to.be.a('object')
-//             done();
-
-//         });
-// });
-=======
   it("should add article while logged in", (done) => {
     let articleId = ''
     chai.request(app)
@@ -122,4 +104,3 @@ describe("QUERY END-POINT TESTING", () => {
 
         });
 });
->>>>>>> ft-my-brand-api-test-3
