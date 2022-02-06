@@ -17,6 +17,10 @@ try {
     } else if (mode === "production") {
         mongoose.connect(process.env.PRODUCTION_DB, { useNewUrlParser: true })
     }
+    app.get("/", (req, res) => {
+        res.json({ message: "Welcome to my the API" });
+      });
+
     app.use(express.json())
     app.use("/api/v1/", routes)
     app.listen(port, () => {
