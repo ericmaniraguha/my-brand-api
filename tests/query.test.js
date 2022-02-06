@@ -59,10 +59,14 @@ describe("QUERY END-POINT TESTING", () => {
 
     it("Should not retrieve the queries",  (done) => {
 <<<<<<< HEAD
+        chai.request(app).get("/api/v1/qeuries/")
+=======
+<<<<<<< HEAD
         chai.request(app).get("/api/v1/qeury/")
 =======
         chai.request(app).get("/api/v1/qeuries/")
 >>>>>>> ft-my-brand-api-test-3
+>>>>>>> a4f5e006f73fcd6f329f1a04f2c16abe9f98ace6
         .send()
         .end((err,res)=>{
         expect(res).to.have.status([404])
@@ -89,6 +93,8 @@ describe("QUERY END-POINT TESTING", () => {
 
   //adding articles while logged in
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 //   it("should add article while logged in", (done) => {
 //     let articleId = ''
 //     chai.request(app)
@@ -106,6 +112,7 @@ describe("QUERY END-POINT TESTING", () => {
 //         });
 // });
 =======
+>>>>>>> a4f5e006f73fcd6f329f1a04f2c16abe9f98ace6
   it("should add article while logged in", (done) => {
     let articleId = ''
     chai.request(app)
@@ -121,5 +128,9 @@ describe("QUERY END-POINT TESTING", () => {
             done();
 
         });
+<<<<<<< HEAD
+});
+=======
 });
 >>>>>>> ft-my-brand-api-test-3
+>>>>>>> a4f5e006f73fcd6f329f1a04f2c16abe9f98ace6

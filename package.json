@@ -45,6 +45,11 @@
   "homepage": "",
   "dependencies": {
     "@babel/cli": "^7.17.0",
+<<<<<<< HEAD
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/register": "^7.17.0",
+=======
     "@babel/core": "^7.17.0",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/plugin-transform-runtime": "^7.17.0",
@@ -53,14 +58,22 @@
     "babel-cli": "^6.26.0",
 =======
 >>>>>>> ft-my-brand-api-test-3
+>>>>>>> a4f5e006f73fcd6f329f1a04f2c16abe9f98ace6
     "bcrypt": "^5.0.1",
     "better-npm-run": "^0.1.1",
+    "cli": "^1.0.1",
     "cloudinary": "^1.28.1",
     "cors": "^2.8.5",
     "dotenv": "^14.3.2",
     "express": "^4.17.2",
     "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
+<<<<<<< HEAD
+    "mongoose": "^6.2.0",
+    "mongoose-list": "^0.2.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4",
+=======
 <<<<<<< HEAD
     "mongoose": "^6.2.0",
     "mongoose-list": "^0.2.2",
@@ -73,6 +86,7 @@
     "multer": "^1.4.4",
     "nanoid": "^3.2.0",
 >>>>>>> ft-my-brand-api-test-3
+>>>>>>> a4f5e006f73fcd6f329f1a04f2c16abe9f98ace6
     "swagger": "^0.7.5",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.3.0",
@@ -80,6 +94,9 @@
   },
   "devDependencies": {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a4f5e006f73fcd6f329f1a04f2c16abe9f98ace6
     "@babel/core": "^7.16.12",
 =======
 >>>>>>> ft-my-brand-api-test-3
@@ -88,8 +105,11 @@
     "@babel/preset-env": "^7.16.11",
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     "babel-loader": "^8.2.3",
 >>>>>>> ft-my-brand-api-test-3
+>>>>>>> a4f5e006f73fcd6f329f1a04f2c16abe9f98ace6
     "chai": "^4.3.6",
     "chai-http": "^4.3.0",
     "coveralls": "^3.1.1",

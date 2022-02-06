@@ -5,9 +5,12 @@ import 'dotenv/config';
 import Article from "./../src/models/article.js"
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 // const all = Article.find()
 // let articleId=all[0]._id;
 =======
+>>>>>>> a4f5e006f73fcd6f329f1a04f2c16abe9f98ace6
 let articleId
 
 const getArticleId= async ()=>{
@@ -19,7 +22,10 @@ const getArticleId= async ()=>{
 (async ()=>{
     articleId=await getArticleId()
 })()
+<<<<<<< HEAD
+=======
 >>>>>>> ft-my-brand-api-test-3
+>>>>>>> a4f5e006f73fcd6f329f1a04f2c16abe9f98ace6
 
 chai.use(chaiHttp)
 describe("ARTICLE END-POINT TESTING", () => {
@@ -45,6 +51,8 @@ describe("ARTICLE END-POINT TESTING", () => {
 })
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 // it("Should  retrieve the article by id", (done) => {
 //     chai
 //         .request(app)
@@ -59,6 +67,7 @@ describe("ARTICLE END-POINT TESTING", () => {
 //         });
 // });
 =======
+>>>>>>> a4f5e006f73fcd6f329f1a04f2c16abe9f98ace6
 it("Should  retrieve the article by id", (done) => {
     chai
         .request(app)
@@ -72,7 +81,10 @@ it("Should  retrieve the article by id", (done) => {
             done();
         });
 });
+<<<<<<< HEAD
+=======
 >>>>>>> ft-my-brand-api-test-3
+>>>>>>> a4f5e006f73fcd6f329f1a04f2c16abe9f98ace6
 
     // DELETE AN ARTICLE
     // it("Should  not delete the article by id", (done) => {
