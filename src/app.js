@@ -1,6 +1,10 @@
 import express from "express"
 import mongoose from "mongoose"
 import routes from "./routes/index.js"
+import cors from "cors";
+import morgan from "morgan";
+import swaggerUI from 'swagger-ui-express';
+import { swaggerDocument } from "../swagger.json";
 import 'dotenv/config'
 const app = express()
 const port = process.env.PORT || 3000
