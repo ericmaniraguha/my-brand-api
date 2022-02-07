@@ -70,9 +70,6 @@
         }
 
       },
-  
-
-
       "/api/v1/users/login": {
         "post": {
           "tags": ["Users"],
@@ -168,44 +165,7 @@
             }
           }
         },
-        "post": {
-          "tags": ["Articles"],
-          "summary": "Create article",
-          "description": "Create article",
-          "operationId": "postArticles",
-          "parameters": [
-            {
-              "name": "Authorization",
-              "in": "header",
-              "description": "Authorization",
-              "required": true
-            },
-            {
-              "name": "title",
-              "in": "formData",
-              "description": "title",
-              "required": true
-            },
-            {
-              "name": "content",
-              "in": "formData",
-              "description": "content",
-              "required": true
-            },
-            {
-              "name": "image",
-              "in": "formData",
-              "type": "file",
-              "description": "image",
-              "required": true
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "Success"
-            }
-          }
-        },
+
         "patch": {
           "tags": ["Articles"],
           "summary": "Update article",

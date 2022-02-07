@@ -5,8 +5,6 @@ import 'dotenv/config';
 import Article from "./../src/models/article.js"
 
 
-// const all = Article.find()
-// let articleId=all[0]._id;
 
 let articleId
 
@@ -34,7 +32,7 @@ describe("ARTICLE END-POINT TESTING", () => {
         
     })
     it("Should not retrieve the articles",  (done) => {
-        chai.request(app).get("/api/v1/aritcle/")
+        chai.request(app).get("/api/v1/aritcles/")
         .send()
         .end((err,res)=>{
         expect(res).to.have.status([404])
@@ -59,13 +57,13 @@ it("Should  retrieve the article by id", (done) => {
 
 
     // DELETE AN ARTICLE
-    // it("Should  not delete the article by id", (done) => {
-    //     chai
-    //         .request(app)
-    //         .delete(`/api/v1/articles/${articleId}`)
-    //         .send()
-    //         .end((err, res) => {
-    //             expect(res).to.have.status([401]);
-    //             done();
-    //         });
-    // });
+    it("Should  not delete the article by id", (done) => {
+        chai
+            .request(app)
+            .delete(`/api/v1/articles/${articleId}`)
+            .send()
+            .end((err, res) => {
+                expect(res).to.have.status([401]);
+                done();
+            });
+    });
