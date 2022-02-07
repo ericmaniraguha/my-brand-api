@@ -29,6 +29,50 @@
           }
         }
       },
+      "/api/v1/users/register":{
+        "post": {
+          "tags": ["Users"],
+          "summary": "Create user",
+          "description": "Create user",
+          "operationId": "postUser",
+          "parameters": [
+            {
+              "name": "username",
+              "in": "formData",
+              "description": "username",
+              "required": true
+            },
+            {
+              "name": "email",
+              "in": "formData",
+              "description": "email",
+              "required": true
+            },
+            {
+              "name": "password",
+              "in": "formData",
+              "description": "password",
+              "required": true
+            },
+            {
+              "name": "picture",
+              "in": "formData",
+              "type": "file",
+              "description": "picture",
+              "required": true
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+
+      },
+  
+
+
       "/api/v1/users/login": {
         "post": {
           "tags": ["Users"],
