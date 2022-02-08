@@ -6,7 +6,7 @@ import Article from "./../src/models/article.js"
 
 
 
-let articleId
+let articleId;
 
 const getArticleId= async ()=>{
     const all = await Article.find()
@@ -49,7 +49,7 @@ it("Should  retrieve the article by id", (done) => {
         .end((err, res) => {
             expect(res).to.have.status([200]);
             expect(res).to.have.property("status");
-            expect(res.body).to.have.property("message");
+            // expect(res.body).to.have.property("message");
             expect(res.body).to.have.property("data");
             done();
         });

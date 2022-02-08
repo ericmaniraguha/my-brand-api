@@ -1,51 +1,3 @@
-
-// import chai, { expect } from 'chai'
-// import chaiHttp from 'chai-http'
-// import app from '../src/app.js'
-// import 'dotenv/config';
-// import {comment} from "./dummyData.js"
-// import Article from "./../src/models/article.js"
-
-// const all = await Article.find()
-// let articleId=all[0]._id;
-
-
-// chai.use(chaiHttp)
-// describe("COMMENT END-POINT TESTING", () => {
-
-//      it("It should Create the comment",(done) => {
-        
-//         chai.request(app).post(`/api/v1/comments/${articleId}`)
-//         .send(comment)
-//         .end((err,res)=>{
-//             expect(res).to.have.status([201])
-//           done()
-//         })
-        
-//     })
-
-
-//     it("Should retrieve comments of the Article", (done) => {
-//         chai.request(app).get(`/api/v1/comments/${articleId}`)
-//         .send()
-//         .end((err,res)=>{
-//             expect(res).to.have.property("status")
-//             expect(res.body).to.have.property("message")
-//             expect(res.body).to.have.property("data")
-//           done()
-//         })
-        
-//     })
-//     it("Should not retrieve the comments",  (done) => {
-//         chai.request(app).get("/api/v1/comments")
-//         .send()
-//         .end((err,res)=>{
-//         expect(res).to.have.status([404])
-//         done()
-//     })
-//     })
-// })
-
 import chai, { expect } from 'chai'
 import chaiHttp from 'chai-http'
 import app from '../src/app.js'
@@ -92,7 +44,7 @@ describe("COMMENT END-POINT TESTING", () => {
         
     })
     it("Should not retrieve the comments",  (done) => {
-        chai.request(app).get("/api/v1/cmments")
+        chai.request(app).get("/api/v1/commnts")
         .send()
         .end((err,res)=>{
         expect(res).to.have.status([404])
