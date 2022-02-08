@@ -39,8 +39,8 @@ describe("QUERY END-POINT TESTING", () => {
         .send()
         .end((err,res)=>{
             expect(res).to.have.property("status")
-            // expect(res.body).to.have.property("message")
-            // expect(res.body).to.have.property("data")
+            expect(res.body).to.have.property("message")
+            expect(res.body).to.have.property("data")
           done()
         })
         
