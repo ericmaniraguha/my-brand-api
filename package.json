@@ -33,15 +33,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CYIMANA-Faisal/my-brand-api.git"
+    "url": ""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CYIMANA-Faisal/my-brand-api/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/CYIMANA-Faisal/my-brand-api#readme",
+  "homepage": "",
   "dependencies": {
     "@babel/cli": "^7.16.8",
     "@babel/core": "^7.16.12",
