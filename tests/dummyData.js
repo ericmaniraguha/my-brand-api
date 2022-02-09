@@ -3,24 +3,25 @@ export const validUser = {
   password: "kaka@123",
 };
 
-export const invalidUser = {
-  email: "kamaznigmail.com",
-  password: "Pass1234@",
-};
-
-
 export const userData = {
-  username: "kaka",
-  email: "kaka@gmail.com",
-  password: "kaka@123",
+  username: "Eric Maniraguha",
+  email: "ericmaniraguha@gmail.com",
+  password: "eric@123",
 };
 
-export const comment={
-  name:"Mr. Kamaro",
-  comment:"done here"
-}
+export const article = {
+  title: "ICT Always ",
+  content: "ICT ",
+  image: "http://dummy.com/img.jpg",
+};
 
-export const postData = {
-  title: "HMr. Kagabo great Person",
-  content: "I will be here for you....",
-}
+export const comment = {
+  name: "Pedro Coco",
+  comment: "Always here guys....",
+};
+
+export const query = {
+  senderName: "ndayisenga",
+  email: "ndayisenga@gmail.com",
+  message: "Count down guys....",
+};
