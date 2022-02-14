@@ -4,6 +4,7 @@ import Comment from "./comment.js"
 
 const schema = mongoose.Schema({
     title: String,
+    author: String,
     content: String,
     image: String,
     create_at: { type: Date, default: Date.now() },

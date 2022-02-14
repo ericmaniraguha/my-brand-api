@@ -127,6 +127,12 @@
             "required": true
           },
           {
+            "name": "author",
+            "in": "formData",
+            "description": "author",
+            "required": true
+          },
+          {
             "name": "content",
             "in": "formData",
             "description": "content",
