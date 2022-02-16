@@ -64,7 +64,7 @@ loginForm.addEventListener("submit",async (e) => {
     //check if the user is successfuly logged in
     if (auth.status === 200 ) {
                // can only be accessible if logged in
-                const token = "Bearer" +' '+auth.data.accessToken;
+                const token = "Bearer"+' '+auth.data.accessToken;
                 localStorage.setItem ("accessToken",token)
                 localStorage.setItem("isLogedIn", JSON.stringify(true))
                 // document.querySelector("#loginError").style.display = "none";
