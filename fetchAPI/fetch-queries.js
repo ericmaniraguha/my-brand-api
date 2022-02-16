@@ -1,18 +1,22 @@
-// const queryCollection = document.querySelector('.column');
+const queryCollection = document.querySelector('.column');
 // var q = localStorage.getItem('queries');
 // var splitObj = JSON.parse(q);
-
-const queriesContainer = document.querySelector(".column");
-
-async function queryView() {
-    
-    const getQueries = await get('/queries/');
-    console.log(getQueries)
-    const queries = getQueries.data;
-    console.log(queries)
-
 // var msg = splitObj.sort().reverse();
-queries.forEach((messageUser) => {
+const url = 'https://my-brand-api-1.herokuapp.com/api/v1/queries';
+
+
+fetch(url,{
+    method:'GET',
+    headers: {
+        'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMDNmYmZlZGZmMDE5OGFlOWM1MDJhZSIsImlhdCI6MTY0NTAyMzM4OCwiZXhwIjoxNjQ1NjI4MTg4fQ.juUSUp-bBykQVxEVK9hqwvQuiHVtX6OuS09v6Atx7RM',
+    },
+})
+.then((res) => res.json())
+.then((data) =>{
+    console.log(data);
+const content = data.data;
+
+content.forEach((messageUser) => {
 
     let div = document.createElement('div');
     div.setAttribute('class', 'query');
@@ -24,17 +28,18 @@ queries.forEach((messageUser) => {
     let p = document.createElement('p');
     let hr = document.createElement('hr');
     let btn = document.createElement('button');
-    btn.setAttribute("value", messageUser.id);
+    btn.setAttribute("value", messageUser._id);
     btn.setAttribute("id", "deleteButton");
     btn.innerHTML = "Delete";
     
     let span = document.createElement('span');
-    h4.textContent = messageUser.Fname;
-    h4.textContent = messageUser.Lname;
+    
+    h4.textContent = messageUser.senderName;
+    h4.textContent = messageUser.email;
     geo.textContent = messageUser.location;
-    h6.textContent = messageUser.Time;
-    p.textContent = messageUser.Message;
-    span.textContent = messageUser.Email;
+    h6.textContent = messageUser.date_created;
+    p.textContent = messageUser.message;
+    // span.textContent = messageUser.Email;
 
     div.append(br);
     div.append(br);
@@ -70,11 +75,22 @@ queries.forEach((messageUser) => {
     queryCollection.appendChild(div);
     btn.getAttribute("value")
     btn.addEventListener('click', (e) => {
-        const toBeDeleted = btn.getAttribute("value");
+     /*    const toBeDeleted = btn.getAttribute("value");
         const allQueries = JSON.parse(localStorage.getItem("queries"))
         const restOfQueries = allQueries.filter((query) => {
-            return query.id !== toBeDeleted
+      */      /*  return query.id !== toBeDeleted
+        }) */
+        var id = messageUser._id;
+        const url_id = url + '/' + id;
+        console.log(url_id);
+
+        fetch(url_id,{
+            method:'DELETE',
+            headers: {
+                'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMDNmYmZlZGZmMDE5OGFlOWM1MDJhZSIsImlhdCI6MTY0NTAyMzM4OCwiZXhwIjoxNjQ1NjI4MTg4fQ.juUSUp-bBykQVxEVK9hqwvQuiHVtX6OuS09v6Atx7RM',
+            },
         })
+
         if (window.confirm("are you sure you need to delete this message")) {
             localStorage.setItem("queries", JSON.stringify(restOfQueries))
             location.reload()
@@ -82,5 +98,4 @@ queries.forEach((messageUser) => {
     }
     );
 })
-}
-queryView();
+})

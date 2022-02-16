@@ -25,7 +25,7 @@ const getArticles = () => {
             
             <p> ${article.content.substring(
               0,
-              300
+              200
             )}</p>
             <a href="blog-read-more-01.html?id" id ="read-more">Read more</a>
         </div>

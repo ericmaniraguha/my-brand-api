@@ -1,31 +1,4 @@
 
-// let retrievedToken = localStorage.getItem("token");
-//   const createBlog = document.getElementById("myform");
-//   createBlog.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     const formData = new FormData(createBlog);
-//     let response = fetch(
-//       "https://my-brand-api-1.herokuapp.com/api/v1/articles",
-//       {
-//         method: "POST",
-//         body: formData,
-//         headers: {
-//           Authorization: `token ${retrievedToken}`,
-//         },
-//       }
-//     )
-//       .then((res) => {
-//         return res.json();
-//       })
-//       .then((article) => {
-//         console.log(article);
-//         if (article.status == 200) {
-//           window.location.replace("blogb.html");
-//         }
-//       });
-//   });
-
-
 let image = document.getElementById("image").addEventListener("change", function (e){console.log(e.target.files[0])})
 console.log(image)
 //initialising the local storage
@@ -43,6 +16,9 @@ createArticleForm.addEventListener("submit", async (e) => {
     formData.append('image', images);
     formData.append("title", title);
     formData.append("content", content);
+
+
+    
     let existingArticle = fetch('https://my-brand-api-1.herokuapp.com/api/v1/articles', {
         method :"POST",
         mode: 'cors',
@@ -55,9 +31,16 @@ createArticleForm.addEventListener("submit", async (e) => {
         })
         .then((res) => res.json())
         .then((data) => console.log(data));
+        if(author === "" || title === "" || images ==="" || content ===""){
+            alert("Please, your field are empty")
+            document.querySelector("#myform").reset();
+            return;
+        }
+
         if (existingArticle) {
-            alert("Article created successfully");
            
+            alert("Article created successfully");
+            document.querySelector("#myform").reset();
         } else {
             alert("not created");
         }

@@ -41,6 +41,23 @@ loginForm.addEventListener("submit",async (e) => {
         email,
         password
     }
+    
+    if (password === "") {
+        const password_invalid = document.querySelector("#password_invalid")
+        password_invalid.style.border = "solid 2px red";
+        password_invalid.style.display = "block";
+
+        document.querySelector("#myform").reset();
+        document.querySelector("email").focus();
+    }
+    if (!validateEmail (email)) {
+        const email_invalid = document.querySelector("#email_invalid")
+        email_invalid.style.border = "solid 1px red";
+        email_invalid.style.display = "block";
+
+        document.querySelector("#myform").reset();
+        document.querySelector("email").focus();
+    }
     //Authenticating user
     const auth = await post('/users/login',user)
     console.log(auth)
