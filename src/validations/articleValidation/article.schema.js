@@ -7,6 +7,12 @@ export const articleSchema = joi.object({
         "string.empty": "Title is not allowed to be empty",
         "any.required": "Title is required"
     }),
+    author: joi.string().max(500).required().messages({
+        "string.base": "Sorry! It looks like something went wrong. Please try later",
+        "string.pattern.base": "Author must be below 500 characters",
+        "string.empty": "Author is not allowed to be empty",
+        "any.required": "Author is required"
+    }),
     content: joi.string().required().messages({
         "string.base": "Sorry! It looks like something went wrong. Please try later",
         "string.empty": "Article content is not allowed to be empty",

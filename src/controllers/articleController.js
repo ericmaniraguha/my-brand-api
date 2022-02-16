@@ -7,6 +7,7 @@ export class ArticleController {
             req.body.image = await uploadFile(req)
             const data = {
                 title: req.body.title,
+                author:req.body.author,
                 content: req.body.content,
                 image: req.body.image,
                 create_at: new Date()
@@ -42,6 +43,7 @@ export class ArticleController {
             }
             const articleUpdate={
                 title: req.body.title,
+                author:req.body.author,
                 content: req.body.content,
                 image: req.body.image
             }
