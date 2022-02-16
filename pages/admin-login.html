@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/admin-login.css" />
+    <link rel="stylesheet" href="../css/admin-login-left-side.css">
+    <title>Admin Login Page</title>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <!-- logo -->
+      <div class="logo">{E}</div>
+      <!-- navigation  -->
+      <ul class="nav-links">
+        <!-- checkbox toggle -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <!-- navigation menu -->
+        <div class="menu">
+          <li><a href="../index.html">Home</a></li>
+          
+        </div>
+      </ul>
+    </nav>
+    
+    <section class="login-page">
+      <h1>Admin Login Page</h1>
+      <img src="../img/profile.PNG" alt="profile" id="profile" />
+      <div class="login-container">
+        <form class="login-form loader-container" onsubmit="Adminlogin(event)"  id="myform">
+          
+          
+          <div class="form-box">
+            <input class="form-input" type="text" placeholder="Email" id="email" name="email"/>
+            <span class="text-invalid" id="email_invalid"> Email must be valid and not empty</span>
+          </div>
+          <div class="form-box">
+            <input class="form-input" type="password" id="password"  placeholder="Password" name="password"/>
+            <span class="text-invalid" id="password_invalid">Password must not be empty</span
+            >
+          </div>
+          <span class="text-invalid" id="invalid"
+            >Sorry, Your password and email are incrorrect!</span
+          >
+          <div class="form-box">
+            <button type="submit" class="btn btn-primary " id="login_btn" > Login </button>
+          </div>
+
+          <!-- <div class="not-registered"></div> -->
+        </form>
+      </div>
+    </section>
+    <!-- <script src="../main/admin-login.js"></script> -->
+    <script type="text/JavaScript" src="../fetchAPI/helper/fetchapi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="../fetchAPI/login-fetch.js"></script>
+    
+  </body>
+</html>

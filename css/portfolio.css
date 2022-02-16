@@ -1,0 +1,926 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Roboto+Slab:wght@300;400;500;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #135780;
+  background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  color: #fff;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+
+  background-color: #135780;
+  background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+}
+.nav-links a {
+  color: #fff;
+}
+/* logo*/
+.logo {
+  font-size: 32px;
+  /* font-size: 85px; */
+  font-weight: bold;
+  color: rgb(20, 20, 20);
+  padding-right: 15px;
+  padding-left: 100px;
+  padding-top: 25px;
+
+  /* Some animation to the header logo */
+  text-shadow: 0 0 50px rgb(0, 223, 252), 0 0 50px rgb(10, 12, 161),
+    0 0 50px rgb(252, 0, 126), 0 0 50px lawngreen, 0 0 50px rgb(252, 0, 55);
+  animation: animate 5s linear infinite;
+
+  @keyframes: animate {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    filter: hue-rotate(360deg);
+  }
+}
+.container {
+  display: inline-flex;
+  gap: 14px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: url(img-blog/backgroud.jpg); */
+  overflow: hidden;
+  background-color: #135780;
+  gap: 15px;
+}
+
+h1 {
+  color: white;
+  margin-top: -178px;
+}
+.card {
+  display: grid;
+  grid-template-columns:250px;
+  grid-template-rows: 180px 210px 90px;
+  grid-template-areas: "image" "text" "stats";
+
+  border-radius: 18px;
+  background: wheat;
+  box-shadow: 5px 5px 15px black;
+  text-align: center;
+
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin-top: 100px;
+}
+.card-image {
+  grid-area: image;
+  background: url(../img/img-blog/java-proje.png);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+ 
+}
+.card-text .date {
+  grid-area: text;
+  margin: 25px;
+}
+.card-text .date {
+  color: brown;
+  font-size: 13px;
+}
+.card-text .p {
+  color: grey;
+  font-size: 15px;
+  font-weight: 300;
+}
+.card-text h2 {
+  margin-top: 0px;
+  font-size: 28px;
+}
+.card-stats {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background: rgb(6, 114, 146);
+}
+.card-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  color: white;
+}
+.car-stats .type {
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.car-stats .value {
+  font-size: 22px;
+  font-weight: 500;
+}
+.card-stats .border {
+  border-left: 1px solid tomato;
+  border-right: 1px solid tomato;
+}
+.crad-stats .value sup {
+  font-size: 12px;
+}
+.card:hover {
+  transform: scale(1.2);
+  box-shadow: 5px 5px 15px black;
+}
+
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+.menu li:hover {
+  background-color: #1a7272;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+.menu li {
+  padding: 5px 14px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+/* humburger menu*/
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+/* Querie media */
+@media screen and (max-width: 767px) {
+  .nav-links .menu {
+    display: none;
+    position: absolute;
+
+    left: 230px;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 12px;
+    margin-left: 50px;
+    z-index: 1;
+    line-height: 3px;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .nav-links .hamburger {
+    position: absolute;
+    display: block;
+    font-size: 15px;
+    margin-left: -20px;
+  }
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    padding-top: 25px;
+    padding-left: 5px;
+  }
+  h1 {
+    position: absolute;
+    margin-top: -388px;
+    font-size: 18px;
+    margin-left: -290px;
+  }
+  .container {
+    display: block;
+    padding: 5px;
+    margin-top: 255px;
+    margin-bottom: 185px;
+    width: 60%;
+    height: 570px;
+    overflow-y: scroll;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 100px 190px 90px;
+    grid-template-areas: "image" "text" "stats";
+    z-index: -1;
+  }
+  .card h2 {
+    font-size: 20px;
+  }
+  .card p {
+    font-size: 15px;
+  }
+  .card-stats > div {
+    font-size: 13px;
+  }
+  .card .card-image{
+    width: 210px;
+  }
+  .card-stats {
+    width: 205px;
+  }
+}
+
+
+/*  */
+/* Querie media */
+@media screen and (width: 768px) {
+  .nav-links .menu {
+    display: none;
+    position: absolute;
+
+    left: 600px;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 17px;
+    margin-left: 50px;
+    z-index: 1;
+    line-height: 8px;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .nav-links .hamburger {
+    position: absolute;
+    display: block;
+    font-size: 20px;
+    margin-left: -20px;
+  }
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    padding-top: 25px;
+    padding-left: 5px;
+  }
+  h1 {
+    position: absolute;
+    margin-top: -388px;
+    font-size: 18px;
+    margin-left: -290px;
+  }
+  .container {
+    display: block;
+    padding: 5px;
+    margin-top: 255px;
+    margin-bottom: 185px;
+    width: 60%;
+    height: 570px;
+    overflow-y: scroll;
+  }
+  h1{
+    margin-top: -450px;
+    font-size: 35px;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 100px 190px 90px;
+    grid-template-areas: "image" "text" "stats";
+    z-index: -1;
+  }
+  .card h2 {
+    font-size: 25px;
+    margin-left: 105px;
+    width: 250px;
+  }
+  .card .date{
+    font-size: 18px;
+  }
+  .card p {
+    font-size: 18px;
+    width: 350px;
+    margin: 25px;
+  }
+  .card-stats > div {
+    font-size: 13px;
+  }
+  .card .card-image{
+    width: 450px;
+  }
+  .card-stats {
+    width: 450px;
+  }
+}
+
+
+
+/*  */
+@media screen and (width: 320px) {
+  .nav-links .menu {
+    display: none;
+    position: absolute;
+
+    left: 210px;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 12px;
+    margin-left: 0px;
+    z-index: 1;
+    line-height: 3px;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .nav-links .hamburger {
+    position: absolute;
+    display: block;
+    font-size: 15px;
+    margin-left: -20px;
+  }
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    padding-top: 25px;
+    padding-left: 5px;
+  }
+  h1 {
+    position: absolute;
+    margin-top: -308px;
+    font-size: 18px;
+    margin-left: -200px;
+  }
+  .container {
+    display: block;
+    padding: 5px;
+    margin-top: 270px;
+    margin-bottom: 185px;
+    width: 90%;
+    height: 570px;
+    overflow-y: scroll;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 100px 190px 90px;
+    grid-template-areas: "image" "text" "stats";
+    z-index: -1;
+  }
+  .card h2 {
+    font-size: 20px;
+    margin-left: 40px;
+  }
+  .card p {
+    font-size: 15px;
+    width: 250px;
+    margin: 10px;
+  }
+  .card-stats > div {
+    font-size: 13px;
+  }
+  .card .card-image{
+    width: 280px;
+  }
+  .card-stats {
+    width: 280px;
+  }
+}
+
+
+
+/*  411 and 414*/
+@media screen and (width: 411px) {
+  .nav-links .menu {
+    display: none;
+    position: absolute;
+
+    left: 330px;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 12px;
+    margin-left: 0px;
+    z-index: 1;
+    line-height: 3px;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .nav-links .hamburger {
+    position: absolute;
+    display: block;
+    font-size: 15px;
+    margin-left: -20px;
+  }
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    padding-top: 25px;
+    padding-left: 5px;
+  }
+  h1 {
+    position: absolute;
+    margin-top: -388px;
+    font-size: 18px;
+    margin-left: -290px;
+  }
+  .container {
+    display: block;
+    padding: 5px;
+    margin-top: 255px;
+    margin-bottom: 185px;
+    width: 60%;
+    height: 570px;
+    overflow-y: scroll;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 100px 190px 90px;
+    grid-template-areas: "image" "text" "stats";
+    z-index: -1;
+  }
+  .card h2 {
+    font-size: 20px;
+  }
+  .card p {
+    font-size: 15px;
+  }
+  .card-stats > div {
+    font-size: 13px;
+  }
+  .card .card-image{
+    width: 240px;
+  }
+  .card-stats {
+    width: 240px;
+  }
+}
+
+
+/*   414*/
+@media screen and (width: 414px) {
+  .nav-links .menu {
+    display: none;
+    position: absolute;
+
+    left: 330px;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 12px;
+    margin-left: 0px;
+    z-index: 1;
+    line-height: 3px;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .nav-links .hamburger {
+    position: absolute;
+    display: block;
+    font-size: 15px;
+    margin-left: -20px;
+  }
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    padding-top: 25px;
+    padding-left: 5px;
+  }
+  h1 {
+    position: absolute;
+    margin-top: -388px;
+    font-size: 18px;
+    margin-left: -290px;
+  }
+  .container {
+    display: block;
+    padding: 5px;
+    margin-top: 255px;
+    margin-bottom: 185px;
+    width: 60%;
+    height: 570px;
+    overflow-y: scroll;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 100px 190px 90px;
+    grid-template-areas: "image" "text" "stats";
+    z-index: -1;
+  }
+  .card h2 {
+    font-size: 20px;
+  }
+  .card p {
+    font-size: 15px;
+  }
+  .card-stats > div {
+    font-size: 13px;
+  }
+  .card .card-image{
+    width: 240px;
+  }
+  .card-stats {
+    width: 240px;
+  }
+}
+
+
+/*  */
+@media screen and (width: 375px) {
+  .nav-links .menu {
+    display: none;
+    position: absolute;
+
+    left: 330px;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 12px;
+    margin-left: -52px;
+    z-index: 1;
+    line-height: 3px;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .nav-links .hamburger {
+    position: absolute;
+    display: block;
+    font-size: 15px;
+    margin-left: -20px;
+  }
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    padding-top: 25px;
+    padding-left: 5px;
+  }
+  h1 {
+    position: absolute;
+    margin-top: -328px;
+    font-size: 18px;
+    margin-left: -190px;
+  }
+  .container {
+    display: block;
+    padding: 5px;
+    margin-top: 255px;
+    margin-bottom: 185px;
+    width: 90%;
+    /* height: 570px; */
+    overflow-y: scroll;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 100px 190px 90px;
+    grid-template-areas: "image" "text" "stats";
+    z-index: -1;
+  }
+  .card h2 {
+    font-size: 20px;
+    margin-left: 80px;
+  }
+  .card p {
+    font-size: 15px;
+    width: 300px;
+    margin-top: 15px;
+  }
+  .card-stats > div {
+    font-size: 13px;
+  }
+  .card .card-image{
+    width: 330px;
+  }
+  .card-stats {
+    width: 330px;
+  }
+}
+
+
+/*  */
+@media screen and (width: 280px) {
+  .nav-links .menu {
+    display: none;
+    position: absolute;
+
+    left: 330px;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 12px;
+    margin-left: -152px;
+    z-index: 1;
+    line-height: 3px;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .nav-links .hamburger {
+    position: absolute;
+    display: block;
+    font-size: 15px;
+    margin-left: -20px;
+  }
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    padding-top: 25px;
+    padding-left: 5px;
+  }
+  h1 {
+    position: absolute;
+    margin-top: -328px;
+    font-size: 18px;
+    margin-left: -190px;
+  }
+  .container {
+    display: block;
+    padding: 5px;
+    margin-top: 255px;
+    margin-bottom: 185px;
+    width: 90%;
+    /* height: 570px; */
+    overflow-y: scroll;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 100px 190px 90px;
+    grid-template-areas: "image" "text" "stats";
+    z-index: -1;
+  }
+  .card h2 {
+    font-size: 20px;
+    margin-left: 80px;
+    width: 250px;
+  }
+  .card p {
+    font-size: 15px;
+    width: 200px;
+    margin-top: 15px;
+  }
+  .card-stats > div {
+    font-size: 15px;
+  }
+  .card .card-image{
+    width: 250px;
+  }
+  .card-stats {
+    width: 245px;
+  }
+}
+
+/*  */
+@media screen and (width: 540px) {
+  .nav-links .menu {
+    display: none;
+    position: absolute;
+
+    left: 330px;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 12px;
+    margin-left: -52px;
+    z-index: 1;
+    line-height: 3px;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .nav-links .hamburger {
+    position: absolute;
+    display: block;
+    font-size: 15px;
+    margin-left: -20px;
+  }
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    padding-top: 25px;
+    padding-left: 5px;
+  }
+  h1 {
+    position: absolute;
+    margin-top: -328px;
+    font-size: 18px;
+    margin-left: -190px;
+  }
+  .container {
+    display: block;
+    padding: 5px;
+    margin-top: 255px;
+    margin-bottom: 185px;
+    width: 90%;
+    /* height: 570px; */
+    overflow-y: scroll;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 100px 190px 90px;
+    grid-template-areas: "image" "text" "stats";
+    z-index: -1;
+  }
+  .card h2 {
+    font-size: 20px;
+    margin-left: 80px;
+    width: 250px;
+  }
+  .card p {
+    font-size: 15px;
+    width: 450px;
+    margin-top: 15px;
+  }
+  .card-stats > div {
+    font-size: 15px;
+  }
+  .card .card-image{
+    width: 480px;
+  }
+  .card-stats {
+    width: 480px;
+  }
+}
+
+/* Querie media */
+@media screen and (width: 1024px) {
+  .nav-links .menu {
+    display: none;
+    position: absolute;
+
+    left: 330px;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 25px;
+    margin-left: 490px;
+    z-index: 1;
+    line-height: 10px;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .nav-links .hamburger {
+    position: absolute;
+    display: block;
+    font-size: 35px;
+    margin-left: -20px;
+  }
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    padding-top: 35px;
+    padding-left: 5px;
+  }
+ 
+  h1 {
+    position: absolute;
+    margin-top: -388px;
+    font-size: 18px;
+    margin-left: -290px;
+  }
+  .container {
+    display: block;
+    padding: 5px;
+    margin-top: 255px;
+    margin-bottom: 185px;
+    width: 60%;
+    height: 1070px;
+    overflow-y: scroll;
+  }
+  h1{
+    margin-top: -950px;
+    font-size: 35px;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 500px;
+    grid-template-rows: 100px 190px 90px;
+    grid-template-areas: "image" "text" "stats";
+    z-index: -1;
+  }
+  .card h2 {
+    font-size: 25px;
+    margin-left: 105px;
+    width: -250px;
+  
+  }
+  .card .date{
+    font-size: 30px;
+  }
+  .card p {
+    font-size: 25px;
+    width: 550px;
+    margin: 25px;
+  }
+  .card-stats > div {
+    font-size: 25px;
+  }
+  .card .card-image{
+    width: 600px;
+  }
+  .card-stats {
+    width: 600px;
+
+  }
+}

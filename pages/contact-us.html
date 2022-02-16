@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Contact us form</title>
+    <link rel="stylesheet" href="../css/contact-us.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- logo -->
+      <div class="logo">{E}</div>
+      <!-- navigation  -->
+      <ul class="nav-links">
+        <!-- checkbox toggle -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <!-- navigation menu -->
+        <div class="menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../pages/about.html">About</a></li>
+          <li><a href="../pages/skills.html">Skills</a></li>
+          <!-- <li><a href="../pages/portfolio.html">Portofolio</a></li> -->
+          <li><a href="../pages/blogs.html">Blogs</a></li>
+          <li><a href="../pages/contact-us.html">Contact</a></li>
+          <li><a href="../pages/admin-login.html">Login</a></li>
+        </div>
+      </ul>
+    </nav>
+    <div class="container">
+      <h2>Contact us</h2>
+
+      <form action="" id="form" onsubmit="Contact(event)">
+        <div class="wrapper">
+          <div class="box">
+            <input type="text" name="fname" id="fname" />
+            <label for="fname">First Name</label>
+          </div>
+          <div class="box">
+            <input type="text" name="lname" id="lname" />
+            <label for="lname">Last Name</label>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="box">
+            <input type="email" name="email" id="email" />
+            <label for="email">Email</label>
+          </div>
+          <div class="box">
+            <input type="number" name="tel" id="tel" />
+            <label for="tel">Mobile Number</label>
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <div class="box">
+            <textarea id="message"></textarea>
+            <label for="message">Type Your message here....</label>
+          </div>
+        </div>
+        <input type="submit" name="" value="Send " id="send" />
+
+        <i
+          class="btn btn-light fa fa-envelope-square fa-4x"
+          href="mailto:ericmaniraguha@gmail.com"
+          ><span>
+            <a
+              href="mailto:ericmaniraguha@gmail.com?subject = Feedback&body = Message"
+            >
+              ericmaniraguha@gmail.com</a
+            ></span
+          ></i
+        >
+
+        <i
+          class="btn btn-light fa fa-phone-square fa-4x"
+          href="+250 788 746 696"
+          ><span> <a href="tel:+250788746696">+250 788 746 696</a></span></i
+        >
+
+        <i class="btn btn-light fa fa-linkedin-square fa-4x" href=""
+          ><span>
+            <a
+              href="linkedin:https://www.linkedin.com/in/eric-maniraguha-53548125/"
+              >Linkedin</a
+            ></span
+          ></i
+        >
+
+        <i class="btn btn-light fa fa-linkedin-square fa-4x" href=""
+          ><span>
+            <a href="Tweeter:Tweeter:https://twitter.com/maniraguha_eric"
+              >Tweeter</a
+            ></span
+          ></i
+        >
+
+        <i class="btn btn-light fa fa-facebook-square fa-4x" href=""
+          ><span>
+            <a href="Facebook:https://web.facebook.com/maniraguhae/"
+              >Facebook</a
+            ></span
+          ></i
+        >
+      </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+  </body>
+  <script src="../main/contact-us.js"></script>
+  <!-- <script src="../main/protect-page.js"></script> -->
+</html>

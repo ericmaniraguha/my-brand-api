@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/css/admin-articles-dashboard.css"> -->
+    <link rel="stylesheet" href="../css/admin-update-form.css">
+    <title>Admin Dashboard - Articles</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <!-- logo -->
+        <div class="logo">{E}</div>
+        <!-- navigation  -->
+        <div class="nav-links"> 
+          <!-- checkbox toggle -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <!-- navigation menu -->
+        <div class="menu">
+           
+        
+          <li><a href="../pages/create-blog.html">Create Blog</a></li>
+
+          <li><a href="../pages/admin-articles-dashboard.html">update Blogs</a></li>
+
+          <li><a href="../pages/read-queries.html">Read Queries</a></li>
+
+          <li><a href="../pages/admin-update-profile.html">Update Profile</a></li>
+
+          <li><a href="../pages/admin-login.html" style="color: red;" id="logout">Logout</a></li>
+
+         
+          
+        </div>
+      </div>
+    </nav>
+
+
+    
+    
+<div class="container">
+  <div class="title">
+    Admin Dashboard Articles
+  </div>
+  <div class="card-body">
+    <!-- <form class="form"  id='myform' onsubmit="ceatBlog(event)"> -->
+<!--  -->
+      <!-- <div class="inputfield"> -->
+         <!-- <label>Name of the Publisher</label> -->
+         <!-- <input type="text" class="input" id="authorName" > -->
+      <!-- </div>  -->
+      <!--  -->
+      <!-- <div class="inputfield"> -->
+       <!-- <label>Article Title</label> -->
+       <!-- <input type="text" class="input" id="articleName"> -->
+    <!-- </div>  -->
+ <!--  -->
+       <!-- <div class="inputfield"> -->
+         <!-- <label>Upload Image</label> -->
+         <!-- <input type="file" id="image"  > -->
+      <!-- </div>  -->
+     <!--  -->
+     <!-- <div class="inputfield"> -->
+         <!-- <label>Article Edit Form</label> -->
+         <!-- <textarea class="textarea" id="message"></textarea> -->
+      <!-- </div>  -->
+     <!--  -->
+    <!--  -->
+     <!-- <div class="inputfield"> -->
+       <!-- <input type="submit" value="Publish Article" class="btn" id="publish" ><br> -->
+      <!--  -->
+     <!-- </div> -->
+    <!-- </form> -->
+
+
+
+    <form class="form"  id='myform'>
+
+      <div class="inputfield">
+         <label>Name of the Publisher</label>
+         <input type="text" class="input" id="authorName">
+         <span id="titleError" style="display: none; color: orange">Title can not be Empty</span>
+      </div> 
+      
+      <div class="inputfield">
+       <label>Blog Title</label>
+       <input type="text" class="input" name="title" id="article-title">
+       <span id="titleError" style="display: none; color: orange">Title can not be Empty</span>
+    </div> 
+ 
+       <!-- <div class="inputfield"> -->
+         <!-- <label>Select Date</label> -->
+         <!-- <input type="date" class="input" id="date"> -->
+      <!-- </div>   -->
+ 
+       <div class="inputfield">
+         <label>Upload from outside</label>
+         <input type="file" class="input" id="image" >
+      </div> 
+     
+     <div class="inputfield">
+         <label>Blog Edit Form</label>
+         <textarea class="textarea" name="content" id="text"></textarea>
+         <span id="titleError" style="display: none; color: orange">Title can not be Empty</span>
+      </div> 
+     
+   
+     <div class="inputfield">
+       <!-- <input type="submit" name="submit" value="Publish" class="btn"><br> -->
+       <button class="btn multbutton" type="submit" name="submit">publish</button>
+     </div>
+   </form>
+  </div>
+ 
+</div>
+
+    <div class="table-container">
+        <h1 class="heading">Articles' Dashboard </h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Article Number</th>
+                    <th>Publisher</th>
+                    <th>Article Title</th>
+                    <th>Published Date</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody >
+               <!-- <tr>
+                <td data-label="number">1.</td>
+                <td data-label="title">Key of JavaScript </td>
+                <td data-label="date">1 Jan 2021</td>
+                <td data-label="likes">+152</td>
+                <td data-label="Edit"><a href="/pages/admin-update-form.html" class="btn">Edit<i class="material-icons">edit</i></a></td>
+                <td data-label="Delete"><a href="#" class="btn">Delete<i class="material-icons" >delete</i></a></td>
+              </tr>
+        
+              -->
+            </tbody>
+    
+        </table>
+    </div>
+  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+    <!-- <script src="../main/protect-page.js"></script> -->
+    <!-- <script src="../main/admin-dashboard-update.js"></script> -->
+    <!-- <script src="../main/admin-logout.js"></script> -->
+
+    <script src="../fetchAPI/create-article-fetch.js"></script>
+
+</html>

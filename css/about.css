@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar&family=Licorice&family=Lora&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body { 
+
+ background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%); 
+ font-family: 'Roboto', sans-serif;
+}
+a {
+ text-decoration: none;
+}
+li {
+ list-style: none;
+}
+
+/* navigation bars */
+.navbar {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 0.938rem;
+ color: #fff;
+ position: fixed; 
+ top: 0; 
+ width: 100%; 
+
+
+ z-index: 10;
+ background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+}
+.nav-links a {
+ color: #fff;
+}
+/* logo*/
+.logo {
+ font-size: 32px;
+ font-weight: bold;
+ color: rgb(20, 20, 20);
+ padding-right: 0.938rem;
+ padding-left: 4.25rem;
+ padding-top: 0.938rem;
+
+ /* Some animation to the header logo */
+ text-shadow: 0 0 50px rgb(187, 232, 238), 0 0 50px rgb(129, 130, 180),
+   0 0 50px rgb(252, 0, 126), 0 0 50px rgba(126, 252, 0, 0.753),
+   0 0 50px rgb(252, 248, 0);
+ animation: animate 5s linear infinite;
+
+ @keyframes: animate {
+   0% {
+     filter: hue-rotate(0deg);
+   }
+   filter: hue-rotate(360deg);
+ }
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 80%;
+  margin: 65px;
+  
+  justify-content: center;
+  align-items: center;
+
+}
+.text-header{
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  
+}
+.info{
+  display: flex;
+  width: 55%;
+  height: 80%;
+  padding: 2rem;
+}
+.info .start{
+  font-size:35px ;
+}
+.info h4{
+  color:white;
+  font-size: 35px;
+  margin-top: -10px;
+
+  font-family: 'Lora', serif;
+
+}
+
+.profile {
+  width: 15.625rem;
+  height: 15.625rem;
+  margin-left: 8rem;
+  margin-top: 1.375rem;
+  border-radius: 20%;
+}
+.content{
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  text-align: center;
+}
+.content .para {
+  margin-top: 2rem;
+  color: white;
+  font-size: 2rem;
+  text-align: justify;
+}
+/* menu bar*/
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+.menu li:hover {
+  background-color: #1a7272;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+.menu li {
+  padding: 5px 14px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+@media screen and (max-width: 768px) {
+
+  .menu {
+    display: none;
+    position: absolute;
+    right: -98px;
+    left: 0;
+    text-align: center;
+    padding: 0.2rem 0;
+    margin-left: 150px;
+    z-index: 10;
+    font-size: 10px;
+    line-height: 3px;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+    margin-right: 60px;
+  }
+  .logo {
+    font-size: 25px;
+    padding-right: 0.938rem;
+    padding-left: 1.25rem;
+    padding-top: 0.338rem;
+    margin-left: 4rem;
+  }  
+  .container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 650px;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-header{
+    margin-top: 48px;
+    margin-left: 45px;
+
+  }
+  .text-header .info{
+    display: flex;
+    margin-left: -100px;
+    width: 350px;
+    height: 40%;
+    
+  }
+  .text-header .start{
+    margin-left: 20px;
+    margin-top: -12rem;
+  }
+  .text-header .intro{
+     font-size: 20px;
+     
+  }
+ 
+  .profile {
+    width: 10.625rem;
+    height: 10.625rem;
+    margin-left: -7rem;
+    margin-top: -1.9rem;
+
+  }
+ 
+  .content{
+    width: 100%;
+    margin-left: -90px;
+  }
+  .content .para{
+    font-size: .987rem;
+    text-align: justify;
+    margin-right: 3.5rem;
+    margin: 2rem;
+  }
+}
+@media screen and (width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    right: -27rem;
+    left: 0;
+    text-align: center;
+    padding: 0.2rem 0;
+    margin-left: 70px;
+    z-index: 10;
+    font-size: 18px;
+    line-height: 5px;
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+    margin-right: 8rem;
+  }
+  .logo {
+    font-size: 25px;
+    padding-right: 0.938rem;
+    padding-left: 0.25rem;
+    padding-top: 0.338rem;
+  }  
+  .container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 650px;
+  }
+
+  .text-header .info{
+    display: flex;
+    margin-left: -110px;
+    width: 350px;
+    height: 40%;
+
+  }
+  .text-header .start{
+    margin-left: 20px;
+    margin-top: -12rem;
+  }
+ 
+  .profile {
+    width: 18.625rem;
+    height: 18.625rem;
+    margin-left: -2rem;
+    margin-top: .9rem;
+
+  }
+  .content{
+    width: 100%;
+    margin-left: -90px;
+  }
+  .content .para{
+    display: flex;
+    width: 180%;
+    font-size: 1.4rem;
+    margin-left: -34.5rem;
+    margin-top: 38rem;
+  }
+
+}
+
+
+@media screen and (width: 1024px) {
+  .menu {
+    display: none;
+    position: absolute;
+    right: -45rem;
+    left: 0;
+    text-align: center;
+    padding: 0.2rem 0;
+    margin-left: 90px;
+    z-index: 10;
+    font-size: 25px;
+    line-height: 8px;
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+    margin-right: 3rem;
+  }
+  .logo {
+    font-size: 35px;
+    padding-right: 0.938rem;
+    padding-left: 0.25rem;
+    padding-top: 0.338rem;
+    margin-left: 45px;
+  }  
+  .container{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 650px;
+  }
+
+  .text-header .info{
+    display: flex;
+    margin-left: -110px;
+    width: 350px;
+    height: 40%;
+
+  }
+  .text-header .start{
+    margin-left: 20px;
+    margin-top: -12rem;
+  }
+ 
+  .profile {
+    width: 22.625rem;
+    height: 22.625rem;
+    margin-left: -2rem;
+    margin-top: .9rem;
+
+  }
+  .content{
+    width: 100%;
+    margin-left: -90px;
+  }
+  .content .para{
+    display: flex;
+    width: 180%;
+    font-size: 2.4rem;
+    margin-left: -32.5rem;
+    margin-top: 58rem;
+  }
+
+} 

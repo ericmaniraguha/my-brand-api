@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Roboto+Slab:wght@300;400;500;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #135780;
+  background-color: #3612d6;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+/* navigation bars */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  color: #fff;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+
+  background-color: #135780;
+  background-color: #3612d6;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+}
+.nav-links a {
+  color: #fff;
+}
+/* logo*/
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: rgb(20, 20, 20);
+  padding-right: 15px;
+  padding-left: 100px;
+  padding-top: 25px;
+
+  /* Some animation to the header logo */
+  text-shadow: 0 0 50px rgb(0, 223, 252), 0 0 50px rgb(10, 12, 161),
+    0 0 50px rgb(185, 23, 104), 0 0 50px lawngreen, 0 0 50px rgb(252, 0, 55);
+  animation: animate 5s linear infinite;
+
+  @keyframes: animate {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    filter: hue-rotate(360deg);
+  }
+}
+/* navitation menu */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+.menu li:hover {
+  background-color: #1a7272;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+.menu li {
+  padding: 5px 14px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+/* css of my body */
+.container {
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  margin: 90px auto;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+  padding: 30px;
+  margin-top: 150px;
+}
+
+.container .title {
+  font-weight: 700;
+  color: #161615;
+  font-size: 25px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.container .form {
+  width: 100%;
+}
+.btn-logout{
+  background-color: #4c9e9e;
+  transition: 0.3s ease;
+  text-decoration: none;
+  color: white;
+
+}
+.wrapper .form .inputfield {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.container .form .inputfield label {
+  width: 200px;
+  color: #757575;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.container .form .inputfield .input,
+.container .form .inputfield .textarea {
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.container .form .inputfield .textarea {
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.container .form .inputfield .input:focus,
+.container .form .inputfield .textarea:focus {
+  border: 1px solid #054e2a;
+}
+
+.container .form .inputfield p {
+  font-size: 14px;
+  color: #757575;
+}
+.container .form .inputfield .check {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.container .form .inputfield .check .checkmark:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  height: 2px;
+  left: 2px;
+  width: 5px;
+  border-color: transparent transparent rgb(189, 173, 173) rgb(126, 107, 107);
+  transform: rotate(-45deg);
+  border: 3px solid;
+  display: none;
+}
+.container .form .inputfield .check input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.container .form .inputfield .check .checkmark {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #94928c;
+  display: block;
+  position: relative;
+}
+
+.container
+  .form
+  .inputfield
+  .check
+  input[type="checkbox"]:checked
+  ~ .checkmark {
+  background: #1f1e1c;
+}
+
+.container
+  .form
+  .inputfield
+  .check
+  input[type="checkbox"]:checked
+  ~ .checkmark:before {
+  display: block;
+}
+.container .form .inputfield .btn:hover {
+  background-color: #1a7272;
+}
+
+.container .form .inputfield .btn {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 0px;
+  background: rgb(20, 20, 20);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.container .form .inputfield:last-child {
+  margin-bottom: 0;
+}
+
+/* table css */
+
+.table-container {
+  padding: 0 10%;
+  margin: 40px auto 0px;
+}
+.heading {
+  font-size: 0 10%;
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table thead {
+  background-color: rgb(94, 153, 231);
+}
+.table thead tr th {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+  color: rgb(250, 253, 253);
+  opacity: 1;
+  padding: 12px;
+  vertical-align: top;
+  border: 2px solid rgb(30, 30, 31);
+}
+.table tbody tr td {
+  font-size: 14px;
+  letter-spacing: 0.35px;
+  font-weight: normal;
+  color: rgb(17, 17, 17);
+  background-color: cadetblue;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid rgb(30, 30, 31);
+}
+.table .text .table tbody tr td {
+  font-size: 14px;
+  letter-spacing: 0.35px;
+  font-weight: normal;
+  color: tan;
+  background-color: tomato;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid teal;
+}
+.table .text_open {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.35px;
+  color: rgb(23, 26, 26);
+}
+.table tbody tr td .btn {
+  width: 130px;
+  text-decoration: none;
+  line-height: 35px;
+  display: inline-block;
+  background-color: wheat;
+  font-weight: medium;
+  color: blueviolet;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  font-size: 14px;
+  opacity: 1;
+}
+.table-container .add-btn {
+  position: absolute;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 1200px) {
+  .title {
+    flex-direction: column;
+  }
+
+  .title .right-side {
+    width: 100%;
+    padding: 50px 0px 30px 0px;
+  }
+  .main-container {
+    flex-direction: column-reverse;
+  }
+
+  .main-container .right-side .top {
+    width: 100%;
+  }
+  .title .right-side p {
+    width: 90%;
+  }
+  .main-container .right-side {
+    width: 100%;
+  }
+  .main-container .right-side form {
+    width: 90%;
+  }
+  .main-container .right-side .top input {
+    width: 49%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    right: -150px;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+    margin-left: -60px;
+  }
+  .menu li:hover {
+    display: inline-block;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+  }
+  .table thead {
+    display: none;
+  }
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+  .table tr {
+    margin-bottom: 15px;
+  }
+  .table tbody tr td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+  .table td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
+  }
+  .table-container {
+    padding: 0 10%;
+    margin: 120px auto 0px;
+  }
+  .container{
+    margin-top: 250px;
+  }
+}
+@media (max-width: 420px) {
+  .container .form .inputfield {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .container .form .inputfield label {
+    margin-bottom: 5px;
+  }
+  .container .form .inputfield.terms {
+    flex-direction: row;
+  }
+}

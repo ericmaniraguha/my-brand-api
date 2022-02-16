@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar&family=Licorice&family=Lora&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #135780;
+  background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+/* navigation bars */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  color: #fff;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+
+  background-color: #135780;
+  background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+}
+.nav-links a {
+  color: #fff;
+}
+/* logo*/
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: rgb(20, 20, 20);
+  padding-right: 15px;
+  padding-left: 100px;
+  padding-top: 25px;
+
+  /* Some animation to the header logo */
+  text-shadow: 0 0 50px rgb(0, 223, 252), 0 0 50px rgb(10, 12, 161),
+    0 0 50px rgb(185, 23, 104), 0 0 50px lawngreen, 0 0 50px rgb(252, 0, 55);
+  animation: animate 5s linear infinite;
+
+  @keyframes: animate {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    filter: hue-rotate(360deg);
+  }
+}
+/* navitation menu */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+.menu li:hover {
+  background-color: #1a7272;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+.menu li {
+  padding: 5px 14px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* body css */
+
+.title {
+  position: absolute;
+  color: white;
+  margin-left: 40px;
+  margin-top: -30px;
+  display: flex;
+}
+
+.main-container {
+  margin-top: 150px;
+  display: flex;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.main-container .left-side {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  padding: 0px 120px 0px 0px;
+  height: 450px;
+  gap: 100px;
+}
+.right-side .info-01,
+.info-02,
+.info-03,
+.info-04,
+.info-05 {
+  font-size: small;
+  width: 600;
+}
+
+.main-container .right-side {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: -10px;
+  gap: 80px;
+  line-height: 15px;
+}
+
+label {
+  position: absolute;
+  background-color: rgba(196, 196, 196, 1);
+  border-radius: 15px;
+  width: 420px;
+  margin-left: -350px;
+}
+
+label span {
+  display: block;
+  line-height: 5px;
+  padding: 15px 10px;
+}
+
+.info-01 {
+  margin-left: 250px;
+}
+.info-02 {
+  margin-right: 100px;
+}
+.info-03 {
+  margin-right: 190px;
+  /* padding-left: 3rem; */
+}
+.info-04 {
+  margin-right: 260px;
+}
+.info-05 {
+  margin-right: 360px;
+}
+
+.main-container .left-side button {
+  padding: 10px 70px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 35px;
+  margin-left: 20px;
+}
+
+
+/* Querie media max-width:767 */
+@media screen and (max-width: 767px) {
+  .nav-links .menu {
+    display: none;
+    position: absolute;
+
+    left: 250px;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 12px;
+    margin-left: 40px;
+    z-index: 1;
+    line-height: 3px;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    color: #fff;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 10;
+  }
+  .nav-links .hamburger {
+    position: absolute;
+    display: block;
+    font-size: 18px;
+    margin-left: -40px;
+  }
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    padding-top: 25px;
+    padding-left: 5px;
+  }
+  label {
+    position: absolute;
+    background-color: rgba(196, 196, 196, 1);
+    border-radius: 15px;
+    width: 250px;
+  
+  }
+  .main-container{
+    height: 650px;
+    width: 100%;
+  }
+  p{
+    display: none;
+  }
+
+  .info-01 .para{
+      width: 330px;
+      margin-left: -255px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 25px;
+  }
+
+  .info-02 .para-2{
+    margin-top: 90px;
+    width: 320px;
+    margin-left: -5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.info-03 .para-3{
+  margin-top: 124px;
+  width: 360px;
+  margin-left: -20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.info-04 .para-4{
+  margin-top: 180px;
+  width: 320px;
+  margin-left: -10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.info-05 .para-5{
+  margin-top: 240px;
+  width: 350px;
+  margin-left: -15px;
+  font-size: 14px;
+  font-weight: 600;
+}
+label {
+  position: absolute;
+  background-color: none;
+  border-radius: 15px;
+  width: 250px;
+
+}
+
+  label span {
+    display: inline-flex;
+    line-height: 5px;
+  }
+  .main-container .right-side {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-top: 100px;
+    gap: 35px;
+    line-height: 18px;
+
+  }
+  
+.main-container .left-side {
+  position: absolute;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 600px;
+  display: inline-flex;
+  gap: 25px;
+ 
+}
+
+}
+/* 768 */
+/* Querie media width:768 */
+@media screen and (width: 768px) {
+  .nav-links .menu {
+    display: none;
+    position: absolute;
+
+    left: 600px;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 18px;
+    margin-left: 40px;
+    z-index: 1;
+    line-height: 8px;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .nav-links .hamburger {
+    position: absolute;
+    display: block;
+    font-size: 35px;
+    margin-left: -40px;
+  }
+  .logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    padding-top: 25px;
+    padding-left: 5px;
+  }
+  label {
+    position: absolute;
+    background-color: rgba(196, 196, 196, 1);
+    border-radius: 15px;
+    width: 550px;
+  
+  }
+  .main-container{
+    height: 650px;
+    z-index: 1;
+  }
+  p{
+    display: none;
+  }
+
+  .info-01 .para{
+      width: 530px;
+      margin-left: -255px;
+      font-size: 25px;
+      font-weight: 600;
+      margin-top: 25px;
+  }
+
+  .info-02 .para-2{
+    margin-top: 90px;
+    width: 530px;
+    margin-left: -5px;
+    font-size: 25px;
+    font-weight: 600;
+}
+.info-03 .para-3{
+  margin-top: 124px;
+  width: 600px;
+  margin-left: -10px;
+  font-size: 25px;
+  font-weight: 600;
+}
+.info-04 .para-4{
+  margin-top: 180px;
+  width: 530px;
+  margin-left: -10px;
+  font-size: 25px;
+  font-weight: 600;
+}
+.info-05 .para-5{
+  margin-top: 240px;
+  width: 550px;
+  margin-left: -15px;
+  font-size: 25px;
+  font-weight: 600;
+}
+label {
+  position: absolute;
+  background-color: none;
+  border-radius: 15px;
+  width: 250px;
+
+}
+
+  label span {
+    display: inline-flex;
+    line-height: 5px;
+  }
+  .main-container .right-side {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-top: 100px;
+    gap: 35px;
+    line-height: 18px;
+
+  }
+  
+.main-container .left-side {
+  position: absolute;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 600px;
+  display: inline-flex;
+  font-size: 25px;
+  font-weight: 600;
+  gap: 25px;
+ 
+}
+
+}
+
+/* 540 */
+
+/* Querie media max-width:540 */
+@media screen and (width: 540px) {
+  .nav-links .menu {
+    display: none;
+    position: absolute;
+
+    left: 250px;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 15px;
+    margin-left: 180px;
+    z-index: 1;
+    line-height: 5px;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    color: #fff;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 10;
+  }
+  .nav-links .hamburger {
+    position: absolute;
+    display: block;
+    font-size: 25px;
+    margin-left: -70px;
+  }
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    padding-top: 25px;
+    padding-left: 5px;
+  }
+  label {
+    position: absolute;
+    background-color: rgba(196, 196, 196, 1);
+    border-radius: 15px;
+    width: 250px;
+  
+  }
+  .main-container{
+    height: 650px;
+    width: 100%;
+    margin-left: 89px;
+  }
+  p{
+    display: none;
+  }
+
+  .info-01 .para{
+      width: 330px;
+      margin-left: -255px;
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 25px;
+  }
+
+  .info-02 .para-2{
+    margin-top: 90px;
+    width: 320px;
+    margin-left: -5px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.info-03 .para-3{
+  margin-top: 124px;
+  width: 360px;
+  margin-left: -20px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.info-04 .para-4{
+  margin-top: 180px;
+  width: 320px;
+  margin-left: -10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.info-05 .para-5{
+  margin-top: 240px;
+  width: 350px;
+  margin-left: -15px;
+  font-size: 15px;
+  font-weight: 600;
+}
+label {
+  position: absolute;
+  background-color: none;
+  border-radius: 15px;
+  width: 250px;
+
+}
+
+  label span {
+    display: inline-flex;
+    line-height: 5px;
+  }
+  .main-container .right-side {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-top: 100px;
+    gap: 35px;
+    line-height: 18px;
+
+  }
+  
+.main-container .left-side {
+  position: absolute;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 600px;
+  display: inline-flex;
+  gap: 25px;
+ 
+}
+}

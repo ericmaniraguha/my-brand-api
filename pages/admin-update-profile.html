@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/css/admin-articles-dashboard.css"> -->
+    <link rel="stylesheet" href="../css/admin-update-form.css">
+    <title>Admin Dashboard - Articles</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <!-- logo -->
+        <div class="logo">{E}</div>
+        <!-- navigation  -->
+        <div class="nav-links"> 
+          <!-- checkbox toggle -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <!-- navigation menu -->
+        <div class="menu">
+           
+        
+          <!-- <li><a href="../pages/admin-skills-update.html">Update Skills</a></li> -->
+
+          <li><a href="../pages/admin-articles-dashboard.html">Create Blogs</a></li>
+
+          <li><a href="../pages/read-queries.html">Read Queries</a></li>
+
+          <li><a href="../pages/admin-update-profile.html">Update Profile</a></li>
+
+          <li><a href="../pages/admin-login.html" style="color: red;" id="logout">Logout</a></li>       
+          
+        </div>
+      </div>
+    </nav>
+
+
+    
+    
+<div class="container">
+  <div class="title">
+    Update Profiles Informations
+  </div>
+  <div class="card-body">
+    <form class="form"  id='myform' onsubmit="ceatBlog(event)">
+
+      <div class="inputfield">
+         <label>Names</label>
+         <input type="text" class="input" id="authorName" >
+      </div> 
+      
+      <div class="inputfield">
+       <label>Greeting Message</label>
+       <input type="text" class="input" id="articleName">
+    </div> 
+ 
+       <div class="inputfield">
+         <label>Image Profile</label>
+         <input type="file" id="image"  >
+      </div> 
+     
+     <div class="inputfield">
+         <label>About Me</label>
+         <textarea class="textarea" id="message"></textarea>
+      </div> 
+     
+    
+     <div class="inputfield">
+       <input type="submit" value="Update Profiles" class="btn" id="publish" ><br>
+       
+     </div>
+    </form>
+  </div>
+ 
+</div>
+
+    <div class="table-container">
+        <h1 class="heading">Profile Information</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Names</th>
+                    <th>Greeting</th>
+                    <th>Updated Date</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody >
+               <!-- <tr>
+                <td data-label="number">1.</td>
+                <td data-label="title">Key of JavaScript </td>
+                <td data-label="date">1 Jan 2021</td>
+                <td data-label="likes">+152</td>
+                <td data-label="Edit"><a href="/pages/admin-update-form.html" class="btn">Edit<i class="material-icons">edit</i></a></td>
+                <td data-label="Delete"><a href="#" class="btn">Delete<i class="material-icons" >delete</i></a></td>
+              </tr>
+        
+              -->
+            </tbody>
+    
+        </table>
+    </div>
+  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+    <script src="../main/protect-page.js"></script>
+    <script src="../main/admin-update-profile.js"></script>
+    <script src="../main/admin-logout.js"></script>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet"
+   href="https://fonts.googleapis.com/css?family=Tangerine">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+   <title>Blogs page - 1</title>
+   <link rel="stylesheet" href="../css/blog-read-more-01.css">
+ </head>
+ <body>
+
+   
+  <nav class="navbar">
+    <!-- logo -->
+    <div class="logo">{E}</div>
+    <!-- navigation  -->
+    <ul class="nav-links">
+      <!-- checkbox toggle -->
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+      <!-- navigation menu -->
+    <div class="menu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../pages/about.html">About</a></li>
+      <li><a href="../pages/skills.html">Skills</a></li>
+      <!-- <li><a href="../pages/portfolio.html">Portofolio</a></li> -->
+      <li><a href="../pages/blogs.html">Blogs</a></li>
+      <li><a href="../pages/contact-us.html">Contact</a></li>
+   
+      
+    </div>
+  </ul>
+</nav>
+
+<div class="flex-container">
+  <div class="para">
+      <h2><span id="date"></span> <br> <p class="author"></p></h2>
+      <div class="image"> <img id="img" src="" alt=""> </div>  
+            <h3 id="title"></h3> <br> <br>
+         
+      <p class="body"> </p> <br><br>
+          <a href="../pages/blogs.html"><span class="back">back</span></a> 
+  </div>
+    
+             <!-- comments form  -->
+            <div class="container">
+                    <h2>Leave us a comment</h2>
+                    <form action="POST"  id="formPost" onsubmit="return false">
+                      <input type="text" name="name" id="name-input" placeholder="Your Name" >
+                      
+                        <textarea placeholder="Add your comment" class="comment-input" id="comment-input"></textarea>
+                       <div class="btn">
+                        <input type="submit" value="Post Comment" class="comment-submit">
+                        <button type="reset" class="comment-cancel">Cancel</button>
+                       </div>
+                    </form>
+            </div>
+           
+            <!-- <div class="read-comment">
+                <h2><span class="title">Read Comments </span></h2>
+                <div class="comments">
+                  <div class="">
+                    <img
+                      class="comment-avatar"src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"
+                    />
+                    <div>
+                      <h3 class="comment-author">Eric Maniraguha</h3> <br> <br>
+                      <p class="comment-body">Your idea is important to us.....</p> 
+                    </div>
+                  </div>
+                </div>
+         </div> -->
+
+        <ul id="list-comment">
+          <h2>Read Comments</h2>
+          <img class="comment-avatar"src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"/>
+        </ul>
+     
+         <script src="../main/comment-blog.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+   <!-- <script src="../main/protect-page.js"></script> -->
+ </body>
+</html>
