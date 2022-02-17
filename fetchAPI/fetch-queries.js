@@ -43,8 +43,8 @@ content.forEach((messageUser) => {
     div.append(br);
     div.append(br);
 
-    div.appendChild(h4).style.textTransform = "capitalize";
-   
+    div.appendChild(h4).style.textTransform = "small";
+    
     
     div.appendChild(p);
     div.appendChild(geo).style.color = "grey";
@@ -86,9 +86,9 @@ content.forEach((messageUser) => {
         })
 
         if (window.confirm("are you sure you need to delete this message")) {
-           
+            window.location.reload();
             localStorage.setItem("queries", JSON.stringify(restOfQueries))
-            location.reload();
+            
      
         }
     }

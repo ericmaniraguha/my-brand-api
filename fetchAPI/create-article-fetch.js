@@ -17,8 +17,6 @@ createArticleForm.addEventListener("submit", async (e) => {
     formData.append("title", title);
     formData.append("content", content);
 
-
-    
     let existingArticle = fetch('https://my-brand-api-1.herokuapp.com/api/v1/articles', {
         method :"POST",
         mode: 'cors',
@@ -32,13 +30,14 @@ createArticleForm.addEventListener("submit", async (e) => {
         .then((res) => res.json())
         .then((data) => console.log(data));
         if(author === "" || title === "" || images ==="" || content ===""){
-            alert("Please, your field are empty")
+            
+            alert("Please, you are required to fill all fields.")
             document.querySelector("#myform").reset();
             return;
         }
 
         if (existingArticle) {
-           
+           location.reload();
             alert("Article created successfully");
             document.querySelector("#myform").reset();
         } else {

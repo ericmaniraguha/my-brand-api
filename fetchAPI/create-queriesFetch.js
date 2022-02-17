@@ -1,7 +1,7 @@
 let fname = document.getElementById('fname');
 let email = document.getElementById('email');
 let message = document.getElementById('message');
-let form = document.getElementById('form');
+let form = document.getElementById('myform');
 
 
 var fname_invalid = document.getElementById("fname_invalid");
@@ -25,7 +25,7 @@ function Contact(event) {
  
  event.preventDefault();
 
- if (fname.value == "" && message.value == "") {
+ if (fname.value == "" || message.value == "") {
 
      fname.style.border = "solid 1px red";
      email.style.border = "solid 1px red";
@@ -70,12 +70,14 @@ function Contact(event) {
 
         if (check) {
             alert("Send Messege Well");
+           form.reset(); 
            
         } else {
             alert("not Send Messege");
+            form.reset(); 
         }
- }
 
+ }
  function check_email(email) {
      if (!email.match(/\S+@\S+\.\S+/)) {
          return false;

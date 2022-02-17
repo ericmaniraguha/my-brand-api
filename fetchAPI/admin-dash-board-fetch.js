@@ -2,6 +2,7 @@
 
 var tbody = document.querySelector("tbody");
 const token = localStorage.getItem("accessToken");
+const form = document.getElementById('myform');
 
 
 
@@ -99,7 +100,6 @@ const getAr = async () =>{
        
         // editarticles
         function editPost(event) {
-            const formContainer = document.getElementById('myform');
             const publish = document.getElementById("publish");
             console.log(event.target.parentElement.parentElement.parentElement.firstChild.textContent)
 
@@ -109,16 +109,16 @@ const getAr = async () =>{
             const text =  document.getElementById('text').value;
 
                     
-        publish.addEventListener('click',(e)=>{
+        form.addEventListener('submit',(e)=>{
                 e.preventDefault();
 
-                const formData = new FormData();
-                formData.append('author',author)
+                const formData = new FormData(form);
+               /*  formData.append('author',author)
                 formData.append('image', image);
                 formData.append("title", title);
-                formData.append("content", text);
-
-                console.log(image)
+                formData.append("content", text); */
+                // console.log(image)
+                
                  fetch(`https://my-brand-api-1.herokuapp.com/api/v1/articles/${posts[index]._id}`,
                 {
                     method :"PATCH",
@@ -128,13 +128,17 @@ const getAr = async () =>{
                     body:formData
                  
                 }
+            /*     , window.location.reload(), */
+                
              )
-                    .then((res) => res.json())
+                    .then((res) => {return res.json();})
                     .then((data) => console.log(data));
-
+                   
+              alert('Data well updated!')
             })
+            
            }
-    
+         
         }
 
    }

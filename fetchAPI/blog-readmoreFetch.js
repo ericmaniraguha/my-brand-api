@@ -1,5 +1,3 @@
-// const urlParams = new URLSearchParams(location.search);
-// var id = urlParams.get("id");
 
 
 let id = location.hash.split('#')[1]
