@@ -43,10 +43,8 @@ const addComment = async () =>{
          method:'POST',
          body: JSON.stringify(obj),
          headers:{
-            'Content_Type':'application/json'
+            'Content-Type':'application/json'
          }
-        
-
     })
     if(comment.status === 201){
     const results = await comment.json();
@@ -83,6 +81,7 @@ formPost.addEventListener('submit', (e) => {
     // saveComment();
     // location.reload();
   })
+
 
 function validationFun() { 
   if (input1.value == "" && input2.value == "") {

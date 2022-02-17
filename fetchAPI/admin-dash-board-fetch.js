@@ -103,26 +103,35 @@ const getAr = async () =>{
             const publish = document.getElementById("publish");
             console.log(event.target.parentElement.parentElement.parentElement.firstChild.textContent)
 
-            let retrieved=JSON.parse(localStorage.getItem('article'));
-            authorName.value = retrieved[index].authorName;
-            articleName.value = retrieved[index].articleName;
-            message.value = retrieved[index].message;
-
+            const author = document.getElementById('authorName').value;
+            const title =  document.getElementById('article-title').value;
+            const image =  document.getElementById('image').files[0];
+            const text =  document.getElementById('text').value;
 
                     
         publish.addEventListener('click',(e)=>{
                 e.preventDefault();
-                console.log(e.target.textContent)
-                retrieved[index].authorName=authorName.value;
-                retrieved[index].articleName = articleName.value;
-                retrieved[index].message = message.value;
-                              
-                localStorage.setItem('article',JSON.stringify(retrieved));
-            
-                setTimeout(() => {
-                formContainer.classList.toggle('open-modal');
-                window.location.reload();
-                }, 2000);
+
+                const formData = new FormData();
+                formData.append('author',author)
+                formData.append('image', image);
+                formData.append("title", title);
+                formData.append("content", text);
+
+                console.log(image)
+                 fetch(`https://my-brand-api-1.herokuapp.com/api/v1/articles/${posts[index]._id}`,
+                {
+                    method :"PATCH",
+                    headers:{
+                     Authorization:`${token}`
+                    },
+                    body:formData
+                 
+                }
+             )
+                    .then((res) => res.json())
+                    .then((data) => console.log(data));
+
             })
            }
     

@@ -86,8 +86,9 @@ content.forEach((messageUser) => {
         })
 
         if (window.confirm("are you sure you need to delete this message")) {
-            location.reload();
+           
             localStorage.setItem("queries", JSON.stringify(restOfQueries))
+            location.reload();
      
         }
     }

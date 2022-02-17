@@ -1,36 +1,33 @@
+let fname = document.getElementById('fname');
+let email = document.getElementById('email');
+let message = document.getElementById('message');
+let form = document.getElementById('form');
 
 
-const createQuery = document.querySelector('#myform');
+var fname_invalid = document.getElementById("fname_invalid");
+var email_invalid = document.getElementById("email_invalid");
+var Message_invalid = document.getElementById("message");
 
-const getAr = async () =>{
-    const res = await fetch('https://my-brand-api-1.herokuapp.com/api/v1/articles')
-    const result = await res.json();
-   
+// date function 
+var time = new Date().toLocaleString('en-GB', {
+ year: "numeric",
+ month: 'long',
+ day: '2-digit',
+ weekday: "long",
+ hour: '2-digit',
+ minute: '2-digit',
+ second: '2-digit'
+})
 
-    //getting values from the form
-    let fname = e.target.elements.senderName.value;
-    let email = e.target.elements.email.value;
-    let message = e.target.elements.message.value;
 
-//    define the message
-const query ={
-     "senderName" : fname,
-     email,
-     message,
-     location,
-}
-console.log(query);
-     const createQueries = await postMessage('')
-    
-     const postQueries = await post('/queries/',query);
-     console.log(postQueries)
-     const queries = postQueries.data;
-    
+
+function Contact(event) {
+ 
+ event.preventDefault();
+
  if (fname.value == "" && message.value == "") {
 
      fname.style.border = "solid 1px red";
-    //  lname.style.border = "solid 1px red";
-     tel.style.border = "solid 1px red";
      email.style.border = "solid 1px red";
      message.style.border = "solid 1px red";
      fname_invalid.style.display = "block";
@@ -44,14 +41,39 @@ console.log(query);
 
  else {
      var obj = {
-         id: uuidv4(),
+        //  id: uuidv4(),
          Fname: fname.value,
          Email: email.value,
-         location: userLocation,
+        //  location: userLocation,
          Message: message.value,
-         Time: time
+        //  Time: time
     
      }
+
+     let check = fetch('https://my-brand-api-1.herokuapp.com/api/v1/queries', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json, text/plain,*/*',
+            'content-type': 'application/json',
+        },
+
+        body: JSON.stringify({
+            senderName: fname.value,
+            email: email.value,
+            message: message.value,
+            // date_created: Date.now(),
+        }),
+    })
+    .then((res) => res.json())
+
+        .then((data) => console.log(data));
+
+        if (check) {
+            alert("Send Messege Well");
+           
+        } else {
+            alert("not Send Messege");
+        }
  }
 
  function check_email(email) {
@@ -63,6 +85,7 @@ console.log(query);
      } 
      return true;
  }
+}
 
 // geolocation Detatection
 
@@ -102,8 +125,6 @@ function errorCallback (error){
  }
 
  button.setAttribute("disabled", "true");
-}
-
 }
 successCallback();
 
