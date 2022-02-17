@@ -47,7 +47,6 @@ const getAr = async () =>{
           
         }
 
-
         const tr = document.createElement("tr");
         const td1 = document.createElement("td");
         td1.textContent = index + 1;

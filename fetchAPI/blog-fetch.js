@@ -27,7 +27,7 @@ const getArticles = () => {
               0,
               200
             )}</p>
-            <a href="blog-read-more-01.html?id" id ="read-more">Read more</a>
+            <a href="blog-read-more-01.html#${article._id}" id ="read-more">Read more</a>
         </div>
     
     </div> `;

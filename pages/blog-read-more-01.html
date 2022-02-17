@@ -52,7 +52,7 @@
                     <form action="POST"  id="formPost" onsubmit="return false">
                       <input type="text" name="name" id="name-input" placeholder="Your Name" >
                       
-                        <textarea placeholder="Add your comment" class="comment-input" id="comment-input"></textarea>
+                        <textarea placeholder="Add your comment" class="comment-input" id="comment-input" name="message"></textarea>
                        <div class="btn">
                         <input type="submit" value="Post Comment" class="comment-submit">
                         <button type="reset" class="comment-cancel">Cancel</button>
@@ -80,8 +80,9 @@
           <img class="comment-avatar"src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"/>
         </ul>
      
-         <script src="../main/comment-blog.js"></script>
+         <!-- <script src="../main/comment-blog.js"></script> -->
          <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
    <!-- <script src="../main/protect-page.js"></script> -->
+   <script src="../fetchAPI/blog-readmoreFetch.js"></script>
  </body>
 </html>

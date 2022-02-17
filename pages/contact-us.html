@@ -36,26 +36,26 @@
     <div class="container">
       <h2>Contact us</h2>
 
-      <form action="" id="form" onsubmit="Contact(event)">
+      <form action="" id="myform" onsubmit="Contact(event)">
         <div class="wrapper">
           <div class="box">
             <input type="text" name="fname" id="fname" />
-            <label for="fname">First Name</label>
+            <label for="fname">Your Name</label>
           </div>
-          <div class="box">
-            <input type="text" name="lname" id="lname" />
-            <label for="lname">Last Name</label>
-          </div>
+          <!-- <div class="box"> -->
+            <!-- <input type="text" name="lname" id="lname" /> -->
+            <!-- <label for="lname">Last Name</label> -->
+          <!-- </div> -->
         </div>
         <div class="wrapper">
           <div class="box">
             <input type="email" name="email" id="email" />
             <label for="email">Email</label>
           </div>
-          <div class="box">
-            <input type="number" name="tel" id="tel" />
-            <label for="tel">Mobile Number</label>
-          </div>
+          <!-- <div class="box"> -->
+            <!-- <input type="number" name="tel" id="tel" /> -->
+            <!-- <label for="tel">Mobile Number</label> -->
+          <!-- </div> -->
         </div>
 
         <div class="wrapper">
@@ -64,7 +64,7 @@
             <label for="message">Type Your message here....</label>
           </div>
         </div>
-        <input type="submit" name="" value="Send " id="send" />
+        <input type="submit" name="submit" value="Send " id="send" />
 
         <i
           class="btn btn-light fa fa-envelope-square fa-4x"
@@ -111,7 +111,8 @@
       </form>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+      <!-- <script src="../main/contact-us.js"></script> -->
+  <script src="../fetchAPI/create-queriesFetch.js"></script>
   </body>
-  <script src="../main/contact-us.js"></script>
-  <!-- <script src="../main/protect-page.js"></script> -->
+
 </html>

@@ -1,36 +1,4 @@
-// const form = document.querySelector("#myform");
-// document.getElementById("myform").addEventListener("submit", (event) => {
-//   event.preventDefault();
-//   console.log(form);
-//   const formData = new FormData(form);
-//   let response = fetch(
-//     "https://my-brand-api-1.herokuapp.com/api/v1/users/login",
-//     {
-//       method: "POST",
-//       body: formData,
-//     }
-//   )
-//     .then((res) => {
-//       return res.json();
-//     })
-//     .then((user) => {
-//       console.log(user);
-//       if (user.status == 200) {
-//         let token = localStorage.setItem("token", user.accessToken);
-//         window.location.replace("../pages/admin-articles-dashboard.html");
-//       } else {
-//         let errormessage = [];
-//         errormessage.push("INVALID CREDENTIALS!");
-//         errorElement.innerText = errormessage;
-//         setTimeout(() => {
-//           window.location.reload();
-//         }, 3000);
-//       }
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// });
+
 
 const loginForm = document.querySelector("#myform");
 loginForm.addEventListener("submit",async (e) => {
@@ -42,7 +10,7 @@ loginForm.addEventListener("submit",async (e) => {
         password
     }
     
-    if (password === "") {
+    if (password === "" || email === "") {
         const password_invalid = document.querySelector("#password_invalid")
         password_invalid.style.border = "solid 2px red";
         password_invalid.style.display = "block";

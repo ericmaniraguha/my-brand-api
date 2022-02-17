@@ -1,14 +1,12 @@
 const queryCollection = document.querySelector('.column');
-// var q = localStorage.getItem('queries');
-// var splitObj = JSON.parse(q);
-// var msg = splitObj.sort().reverse();
-const url = 'https://my-brand-api-1.herokuapp.com/api/v1/queries';
 
+const url = 'https://my-brand-api-1.herokuapp.com/api/v1/queries';
+const token = localStorage.getItem('accessToken');
 
 fetch(url,{
     method:'GET',
     headers: {
-        'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMDNmYmZlZGZmMDE5OGFlOWM1MDJhZSIsImlhdCI6MTY0NTAyMzM4OCwiZXhwIjoxNjQ1NjI4MTg4fQ.juUSUp-bBykQVxEVK9hqwvQuiHVtX6OuS09v6Atx7RM',
+        'authorization': `${token}`
     },
 })
 .then((res) => res.json())
@@ -75,11 +73,7 @@ content.forEach((messageUser) => {
     queryCollection.appendChild(div);
     btn.getAttribute("value")
     btn.addEventListener('click', (e) => {
-     /*    const toBeDeleted = btn.getAttribute("value");
-        const allQueries = JSON.parse(localStorage.getItem("queries"))
-        const restOfQueries = allQueries.filter((query) => {
-      */      /*  return query.id !== toBeDeleted
-        }) */
+    
         var id = messageUser._id;
         const url_id = url + '/' + id;
         console.log(url_id);
@@ -87,13 +81,14 @@ content.forEach((messageUser) => {
         fetch(url_id,{
             method:'DELETE',
             headers: {
-                'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMDNmYmZlZGZmMDE5OGFlOWM1MDJhZSIsImlhdCI6MTY0NTAyMzM4OCwiZXhwIjoxNjQ1NjI4MTg4fQ.juUSUp-bBykQVxEVK9hqwvQuiHVtX6OuS09v6Atx7RM',
+                'authorization': `${token}`
             },
         })
 
         if (window.confirm("are you sure you need to delete this message")) {
+            location.reload();
             localStorage.setItem("queries", JSON.stringify(restOfQueries))
-            location.reload()
+     
         }
     }
     );
