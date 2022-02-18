@@ -89,6 +89,9 @@ li {
 .flex-container .para {
   padding: 10px 20px;
 }
+.flex-container .para #title{
+  margin-top: 80px;
+}
 .para h2 {
   position: absolute;
   line-height: 36px;
@@ -311,6 +314,7 @@ input[type="checkbox"] {
     padding-left: 20px;
     padding-top: 10px;
   }
+ 
 
   .flex-container {
     margin-top: 180px;
@@ -324,7 +328,9 @@ input[type="checkbox"] {
   .flex-container .para {
     padding: 10px 20px;
     width: 90%;
+    /* background-color: red; */
   }
+ 
   .para h2 {
     position: absolute;
     line-height: 26px;
@@ -334,6 +340,11 @@ input[type="checkbox"] {
   }
   .para h2 span {
     font-size: 15px;
+  }
+  
+  .para .author{
+    margin-top: -10px;
+   margin-left: -150px;
   }
   .para .back {
     color: rgb(218, 36, 36);

@@ -1,5 +1,3 @@
-
-
 let id = location.hash.split('#')[1]
 console.log(id);
 
@@ -7,15 +5,17 @@ const readMore = async () =>{
     const res = await fetch(`https://my-brand-api-1.herokuapp.com/api/v1/articles/${id}`)
     const results = await res.json();
     const Readmessage = results.data;
+   
     console.log(results);
 
-    const date = document.querySelector('#date');
+    // const date = document.querySelector('#date');
     const author = document.querySelector('.author');
     const image = document.querySelector('#img');
     const title = document.querySelector('#title');
     const body = document.querySelector('.body');
     const formPost = document.querySelector('#formPost');
 
+   
     date.textContent = Readmessage.create_at;
     title.textContent = Readmessage.title;
     author.textContent = Readmessage.author;
@@ -34,9 +34,8 @@ const addComment = async () =>{
     var obj = {
         name: input1.value,
         comment: input2.value,
-           
-      }
-    
+     
+      }  
     const comment = await fetch(`https://my-brand-api-1.herokuapp.com/api/v1/comments/${id}`,{
          method:'POST',
          body: JSON.stringify(obj),
@@ -49,9 +48,12 @@ const addComment = async () =>{
     console.log(results);
 
     const commentAdded = results.data;
+    console.log(commentAdded);
     for (let i = 0; i < commentAdded.length; i++)
     {
-      const el3 = document.createElement('h3');
+
+
+      console.log("commentAdded[i].name");
       const el2 = document.createElement('h2');
       const span = document.createElement('span');
       
@@ -61,10 +63,12 @@ const addComment = async () =>{
       el2.style.color = "blue";
       el2.style.fontSize = "12px";
   
+      
       el3.textContent = commentAdded[i].name;
       el2.textContent = commentAdded[i].comment;
     //   span.textContent = commentAdded[i].Time;
       com.append(el3, el2, span);
+      
     }
 
     }else{

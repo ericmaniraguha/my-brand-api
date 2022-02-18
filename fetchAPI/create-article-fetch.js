@@ -1,6 +1,6 @@
 
 let image = document.getElementById("image").addEventListener("change", function (e){console.log(e.target.files[0])})
-console.log(image)
+// console.log(image)
 //initialising the local storage
 const createArticleForm = document.querySelector("#myform");
 createArticleForm.addEventListener("submit", async (e) => {
@@ -16,6 +16,8 @@ createArticleForm.addEventListener("submit", async (e) => {
     formData.append('image', images);
     formData.append("title", title);
     formData.append("content", content);
+
+    console.log(author);
 
     let existingArticle = fetch('https://my-brand-api-1.herokuapp.com/api/v1/articles', {
         method :"POST",

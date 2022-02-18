@@ -4,6 +4,12 @@ var tbody = document.querySelector("tbody");
 const token = localStorage.getItem("accessToken");
 const form = document.getElementById('myform');
 
+let publish = document.getElementById("publish");
+let author = form.elements[0];
+let title =  form.elements[1]
+let image =  document.getElementById('image').files[0];
+let text =  form.elements[3];
+
 
 
 const getAr = async () =>{
@@ -97,28 +103,34 @@ const getAr = async () =>{
         tr.append(td1, td2, td3, td4, td5, td6);
         tbody.appendChild(tr);
 
-       
-        // editarticles
+
         function editPost(event) {
-            const publish = document.getElementById("publish");
-            console.log(event.target.parentElement.parentElement.parentElement.firstChild.textContent)
+                   
+            const getArticle = async() => {
+                const res = await fetch(`https://my-brand-api-1.herokuapp.com/api/v1/articles/${posts[index]._id}`, {
+                    method: 'GET'
+                })
+            
+                const result = await res.json();
+            
+                if (res.status === 200) {
+            
+                    title.value = result.data.title;
+                    text.value = result.data.content;
+                    author.value = result.data.author;
+                    console.log(result)
+                }
+            }
 
-            const author = document.getElementById('authorName').value;
-            const title =  document.getElementById('article-title').value;
-            const image =  document.getElementById('image').files[0];
-            const text =  document.getElementById('text').value;
+            getArticle();
+                
 
-                    
         form.addEventListener('submit',(e)=>{
                 e.preventDefault();
 
                 const formData = new FormData(form);
-               /*  formData.append('author',author)
-                formData.append('image', image);
-                formData.append("title", title);
-                formData.append("content", text); */
-                // console.log(image)
-                
+        
+               
                  fetch(`https://my-brand-api-1.herokuapp.com/api/v1/articles/${posts[index]._id}`,
                 {
                     method :"PATCH",
@@ -132,7 +144,10 @@ const getAr = async () =>{
                 
              )
                     .then((res) => {return res.json();})
-                    .then((data) => console.log(data));
+                    .then((data) => {
+                        author = data.author
+                        console.log(data)});
+
                    
               alert('Data well updated!')
             })
