@@ -158,6 +158,8 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 20px 0px;
+  text-align: justify;
+  
 }
 .blog-text a {
   color: rgb(253, 250, 250);

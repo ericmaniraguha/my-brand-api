@@ -9,6 +9,13 @@ body {
   background-color: #135780;
   background-color: #3612d6;
   background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+  line-height: normal;
+}
+.body{
+  text-align: justify;
+  line-height: 2;
+  border-radius: 12px;
+  
 }
 /* width */
 ::-webkit-scrollbar {
@@ -113,6 +120,65 @@ li {
   margin-right: 1rem;
   width: 48px;
 }
+#block{
+  border-radius: 25px;
+  background-color: #135780;
+  padding: 20px;
+  width: 95%;
+  height: auto;
+  margin: 15px;
+}
+.likes, .dislikes{
+  color: rgb(4, 209, 236);
+  display: flex;
+
+  margin-left: 400px;
+  cursor: pointer;
+  text-shadow: 5px 8px 15px #2a93b6;
+  transition: .5s;
+}
+.likes:hover{
+  color: #2a93b6;
+  transform: scale(1.2);
+}
+.dislikes:hover{
+  color: #2a93b6;
+  transform: scale(1.2);
+}
+#dislikeCount{
+   background: #135780;
+}
+#likeCount{
+  background: #135780;
+}
+.flex-likes{
+  display: flex;
+  margin: 0;
+  margin-left: -350px;
+}
+.value{
+  border: none;
+  outline: none;
+  text-align: center;
+  background-color: none;
+  font-size: 12px;
+  /* font-weight: 50;/ */
+  pointer-events: none;
+}
+
+#comment_date{
+  display: flex;
+  font-size: 12px;
+  color: rgb(99, 7, 7);
+}
+.comment-body{
+  display: flex;
+  font-size: 15px;
+}
+.comment-author{
+  display: flex;
+  
+}
 
 #input2, #input1 {
   width: 50px;
@@ -152,9 +218,10 @@ button:active {
 }
 .flex-container .image {
   width: 160px;
-  height: 160px;
+  height: 150px;
   border: 1px solid rgb(104, 97, 97);
   border-end-end-radius: 15px;
+  
 }
 
 .container {

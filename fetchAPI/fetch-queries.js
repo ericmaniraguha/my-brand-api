@@ -32,10 +32,12 @@ content.forEach((messageUser) => {
     
     let span = document.createElement('span');
     
+
+  
     h4.textContent = messageUser.senderName;
     h4.textContent = messageUser.email;
     geo.textContent = messageUser.location;
-    h6.textContent = messageUser.date_created;
+    h6.textContent = (messageUser.date_created).substr(0,10) +' '+ (messageUser.date_created).substr(11,8);
     p.textContent = messageUser.message;
     // span.textContent = messageUser.Email;
 
@@ -44,6 +46,10 @@ content.forEach((messageUser) => {
     div.append(br);
 
     div.appendChild(h4).style.textTransform = "small";
+    div.appendChild(h4).style.color = "	#00008b";
+    div.appendChild(h4).style.cursor = "pointer";
+    div.appendChild(h4).style.textDecoration = "underline";
+    
     
     
     div.appendChild(p);
@@ -52,7 +58,7 @@ content.forEach((messageUser) => {
     div.appendChild(geo).style.fontSize = "12px";
 
     div.appendChild(h6);
-    div.appendChild(h6).style.color = "grey";
+    div.appendChild(h6).style.color = "#a9a9a9";
     
 
     div.appendChild(span).style.color = "blue";

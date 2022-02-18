@@ -1,6 +1,20 @@
 let id = location.hash.split('#')[1]
 console.log(id);
 
+// like and dislikes
+var likeCount = document.querySelector('#likeCount');
+var dislikeCount = document.querySelector('#dislikeCount');
+
+function count(){
+  likeCount.value = parseInt(likeCount.value) + 1;
+
+}
+function count1(){
+  likeCount.value = parseInt(dislikeCount.value) + 1;
+}
+
+
+
 const readMore = async () =>{
     const res = await fetch(`https://my-brand-api-1.herokuapp.com/api/v1/articles/${id}`)
     const results = await res.json();
@@ -15,8 +29,9 @@ const readMore = async () =>{
     const body = document.querySelector('.body');
     const formPost = document.querySelector('#formPost');
 
-   
-    date.textContent = Readmessage.create_at;
+    // }
+
+    date.textContent = ((Readmessage.create_at).substr(0,10) +'  '+ (Readmessage.create_at).substr(11,8));
     title.textContent = Readmessage.title;
     author.textContent = Readmessage.author;
     body.textContent = Readmessage.content;
@@ -44,6 +59,11 @@ const addComment = async () =>{
          }
         
     })
+    .then(res => res.json())
+        .then(() => {
+          getComments();
+
+        })
      
     if(comment.status === 201 ){
     const results = await comment.json();
@@ -85,8 +105,7 @@ formPost.addEventListener('submit', (e) => {
 
      validationFun();  
       addComment();
-      getComments();
-      location.reload();
+      // location.reload();
   
   })
 
@@ -121,16 +140,41 @@ const getComments = () => {
       console.log(content)
       content.map((comment) => {
         let html1 = `
-
             <div class="comment-area">
+            <br> 
             <img
               class="comment-avatar"src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"
             />
-            <div>
-              <h3 class="comment-author">${comment.name} <span id="comment_date">${comment.create_at}</span></h3> <br> <br>
-              <p class="comment-body">${comment.comment}</p> 
-            </div>
+            <div id="block">
+              <h3 class="comment-author">Names: ${comment.name} </h3> <br>
+              <p class="comment-body">${comment.comment}</p> <br>
+              <p id="comment_date">${(comment.create_at).substr(0,10)}  ${(comment.create_at).substr(11,8)}</p>
+            
+            
+            <div class ="flex-likes">
+            
+            <div class="likes">
+            <i  onclick="count()" class="fa fa-thumbs-up"></i>
+               <div class="fas fa-heart icon">
+                 <input id="likeCount" type="number" value="0" class="value">
+               </div>
           </div>
+  
+          <div class="dislikes">
+            <i onclick="count1()" class="fa fa-thumbs-down"></i>
+            <div class="fas fa-heart-broken icon">
+              <input id="dislikeCount" type="number" value="0" class="value">
+            </div>
+            
+            </div>
+         </div>
+            
+            
+              </div>
+          </div>
+
+           
+         
 
                    `;
         myComments.innerHTML += html1;
