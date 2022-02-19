@@ -153,6 +153,7 @@ input[type=number] {
   border-bottom: 1px solid rgb(228, 236, 236);;
   transition: 0.5s linear;
   border-radius: 12px;
+  overflow:hidden;
 }
 .wrapper .box textarea:focus,
 .wrapper .box textarea:valid {
