@@ -102,13 +102,14 @@ const addComment = async () =>{
 
 formPost.addEventListener('submit', (e) => {
     e.preventDefault();
-
+     alert('Thank you for the comment!')
      validationFun();  
       addComment();
-      // location.reload();
+      formPost.reset();
+      
   
   })
-
+  
 
 function validationFun() { 
   if (input1.value == "" && input2.value == "") {

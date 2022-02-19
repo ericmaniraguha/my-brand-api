@@ -70,8 +70,7 @@ function Contact(event) {
         window.location.reload();
         if (check) {
             alert("Send Messege Well");
-           form.reset(); 
-           
+            form.reset(); 
         } else {
             alert("not Send Messege");
             form.reset(); 
