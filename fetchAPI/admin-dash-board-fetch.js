@@ -148,8 +148,9 @@ const getAr = async () =>{
                         author = data.author
                         console.log(data)});
 
-                   
+                        window.location.reload();
               alert('Data well updated!')
+             
             })
             
            }
@@ -158,5 +159,6 @@ const getAr = async () =>{
 
    }
 }
+
 getAr();
 

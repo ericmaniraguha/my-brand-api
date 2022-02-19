@@ -42,7 +42,6 @@ a {
 li {
   list-style: none;
 }
-
 /* navigation bars */
 .navbar {
   display: flex;
@@ -97,13 +96,18 @@ li {
   padding: 10px 20px;
 }
 .flex-container .para #title{
-  margin-top: 80px;
+  /* margin-top: 120px; */
 }
+
 .para h2 {
   position: absolute;
   line-height: 36px;
-  margin-top: 9px;
-  margin-left: 523px;
+  margin-top: 100px;
+  margin-left: 250px;
+}
+.para #img{
+  margin-left: -550px;
+  border-radius: 0 50% 50% 50%;
 }
 
 .para .back {
@@ -204,7 +208,7 @@ button:active {
 }
 
 .para h2 span {
-  color: red;
+  color: rgb(250, 0, 0);
   margin-left: -200px;
   font-size: 20px;
 }
@@ -216,11 +220,13 @@ button:active {
   line-height: 16px;
   font-size: 15px;
 }
-.flex-container .image {
-  width: 160px;
+.flex-container.para .image {
+  width: 150px;
   height: 150px;
   border: 1px solid rgb(104, 97, 97);
   border-end-end-radius: 15px;
+  background-color: red;
+  width: 350px;
   
 }
 
@@ -390,6 +396,7 @@ input[type="checkbox"] {
     justify-content: center;
     align-items: center;
     width: 360px;
+  
   }
 
   .flex-container .para {
@@ -401,23 +408,31 @@ input[type="checkbox"] {
   .para h2 {
     position: absolute;
     line-height: 26px;
-    margin-top: 180px;
+    margin-top: 80px;
     margin-left: 200px;
     font-size: 12px;
   }
   .para h2 span {
     font-size: 15px;
   }
-  
+ .flex-likes{
+   display: block;
+ } 
+ .para #img{
+   width: 200px;
+   border-radius: 50% 20% / 10% 40%;
+   margin-left: -100px;
+ }
+ 
   .para .author{
-    margin-top: -10px;
+    margin-top: 60px;
    margin-left: -150px;
   }
   .para .back {
     color: rgb(218, 36, 36);
     margin-left: 240px;
   }
-  
+
   .para p {
     margin-top: 45px;
   }
@@ -462,7 +477,7 @@ input[type="checkbox"] {
     left: 0;
     text-align: center;
     padding: 30px 0;
-    margin-left: 680px;
+    margin-left: 80px;
     font-size: 22px;
     line-height: 10px;
   }
@@ -481,11 +496,14 @@ input[type="checkbox"] {
   .hamburger {
     position: absolute;
     display: block;
-    margin-left: -40px;
+    margin-right:450px;
     font-size: 35px;
 
     z-index: 10;
      }
+   .flex-container .para #img{
+      width: 60px;
+    }
 
   .logo {
     font-size: 35px;
@@ -502,11 +520,12 @@ input[type="checkbox"] {
     justify-content: center;
     align-items: center;
     width: 760px;
+    overflow: scroll;
   }
 
   .flex-container .para {
-    padding: 10px 20px;
-    width: 90%;
+    /* padding: 10px 20px; */
+    /* width: 60%; */
   }
   .para h2 {
     position: absolute;

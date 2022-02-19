@@ -67,7 +67,7 @@ function Contact(event) {
     .then((res) => res.json())
 
         .then((data) => console.log(data));
-
+        window.location.reload();
         if (check) {
             alert("Send Messege Well");
            form.reset(); 

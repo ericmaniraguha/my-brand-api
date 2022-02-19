@@ -82,7 +82,7 @@ li {
   margin-top: 90px;
   width: 80%;
   padding: 10px;
-  background-color: rgb(15, 14, 14);
+  background-color: #135780;
 }
 .container h2 {
   color: white;
@@ -109,7 +109,7 @@ li {
   background-color: transparent;
   border: none;
   outline: none;
-  border-bottom: 1px solid cyan;
+  border-bottom: 1px solid rgb(228, 236, 236);
   transition: 0.5s linear;
   -webkit-appearance: none;
   
@@ -117,7 +117,7 @@ li {
 .wrapper .box input:focus,
 .wrapper .box input:focus {
   padding: 5px 10px;
-  background: darkcyan;
+  background: rgb(228, 236, 236);
   margin-top: 10px;
 }
 .wrapper .box label {
@@ -145,23 +145,26 @@ input[type=number] {
 }
 
 .wrapper .box textarea {
-  width: 95%;
+  width: 90%;
   font-size: 20px;
   background-color: transparent;
   border: none;
   outline: none;
-  border-bottom: 1px solid cyan;
+  border-bottom: 1px solid rgb(228, 236, 236);;
   transition: 0.5s linear;
+  border-radius: 12px;
 }
 .wrapper .box textarea:focus,
 .wrapper .box textarea:valid {
   padding: 20px 10px;
-  background-color: darkcyan;
+  background-color: rgb(228, 236, 236);
   margin: 10px;
+  
 }
 .wrapper .box textarea:focus ~ label,
 .wrapper .box textarea:valid ~ label {
   padding: 0;
+  
 }
 .container input[type="submit"], input[type="reset"] {
   background-color: darkcyan;
@@ -175,14 +178,17 @@ input[type=number] {
 }
 .fa-4x {
   color: skyblue;
-  margin-left: 90px;
+  margin-left: 50px;
   cursor: pointer;
   font-size: 12px;
 }
+.links{
+  color: rgb(159, 184, 187);
+}
 .fa-4x span {
   display: block;
+  
 }
-
 
 /* Responsive */
 
@@ -297,13 +303,13 @@ input[type=checkbox]{
 
 }
 
- span a{
-  color: skyblue;
+.links{
+  color: rgb(159, 184, 187);
  }
 
 .fa-4x {
   color: skyblue;
-  margin-left: 9px;
+  margin-left: 3px;
   cursor: pointer;
   font-size: 8px;
 }
