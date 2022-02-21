@@ -176,16 +176,24 @@ input[type="checkbox"] {
 @media screen and (max-width: 760px) {
 
   .menu {
+    /* display: none; */
+    /* position: absolute; */
+    /* right: -90px; */
+    /* left: 0; */
+    /* text-align: center; */
+    /* padding: 0.2rem 0; */
+    /* margin-left: 90px; */
+    /* z-index: 10; */
+    /* font-size: 10px; */
+    /* line-height: 3px; */
+
     display: none;
     position: absolute;
-    right: -90px;
+    background-color: teal;
+    right: 0;
     left: 0;
     text-align: center;
-    padding: 0.2rem 0;
-    margin-left: 90px;
-    z-index: 10;
-    font-size: 10px;
-    line-height: 3px;
+    padding: 16px 0;
   }
   .menu li:hover {
     display: inline-block;
@@ -299,16 +307,24 @@ input[type="checkbox"] {
 @media screen and (width: 768px) {
 
   .menu {
+    /* display: none; */
+    /* position: absolute; */
+    /* right: -350px; */
+    /* left: 0; */
+    /* text-align: center; */
+    /* padding: 0.2rem 0; */
+    /* margin-left: 90px; */
+    /* z-index: 10; */
+    /* font-size: 15px; */
+    /* line-height: 3px; */
+
     display: none;
     position: absolute;
-    right: -350px;
+    background-color: teal;
+    right: 0;
     left: 0;
     text-align: center;
-    padding: 0.2rem 0;
-    margin-left: 90px;
-    z-index: 10;
-    font-size: 15px;
-    line-height: 3px;
+    padding: 16px 0;
   }
   .menu li:hover {
     display: inline-block;
@@ -418,16 +434,24 @@ input[type="checkbox"] {
 @media screen and (width: 1024px) {
 
   .menu {
+    /* display: none; */
+    /* position: absolute; */
+    /* right: -490px; */
+    /* left: 0; */
+    /* text-align: center; */
+    /* padding: 0.2rem 0; */
+    /* margin-left: 90px; */
+    /* z-index: 10; */
+    /* font-size: 25px; */
+    /* line-height: 8px; */
+
     display: none;
     position: absolute;
-    right: -490px;
+    background-color: teal;
+    right: 0;
     left: 0;
     text-align: center;
-    padding: 0.2rem 0;
-    margin-left: 90px;
-    z-index: 10;
-    font-size: 25px;
-    line-height: 8px;
+    padding: 16px 0;
   }
   .menu li:hover {
     display: inline-block;

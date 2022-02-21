@@ -271,12 +271,20 @@ h1 {
 
 @media only screen and (width: 280px) {
   .menu {
+    /* display: none; */
+    /* position: absolute; */
+    /* left: 150px; */
+    /* padding: 0.2rem 0; */
+    /* z-index: 10; */
+    /* font-size: 12px; */
+
     display: none;
     position: absolute;
-    left: 150px;
-    padding: 0.2rem 0;
-    z-index: 10;
-    font-size: 12px;
+    background-color: teal;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
   
   }
 
@@ -299,14 +307,22 @@ h1 {
 @media only screen and (max-width: 768px) {
 
   .menu {
+    /* display: none; */
+    /* position: absolute; */
+    /* left: 280px; */
+    /* text-align: center; */
+    /* padding: 0.2rem 0; */
+    /* z-index: 10; */
+    /* font-size: 18px; */
+    /* line-height: 10px; */
+
     display: none;
     position: absolute;
-    left: 280px;
+    background-color: teal;
+    right: 0;
+    left: 0;
     text-align: center;
-    padding: 0.2rem 0;
-    z-index: 10;
-    font-size: 18px;
-    line-height: 10px;
+    padding: 16px 0;
   }
   .menu li:hover {
     display: inline-block;

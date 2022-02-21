@@ -154,15 +154,22 @@ input[type="checkbox"] {
 
 @media only screen and (max-width: 767px) {
   .menu {
+    /* display: none; */
+    /* position: absolute; */
+    /* right: -250px; */
+    /* left: 0; */
+    /* text-align: center; */
+    /* padding: 0.2rem 0; */
+    /* z-index: 10; */
+    /* font-size: 15px; */
+    /* line-height: 8px; */
     display: none;
     position: absolute;
-    right: -250px;
+    background-color: teal;
+    right: 0;
     left: 0;
     text-align: center;
-    padding: 0.2rem 0;
-    z-index: 10;
-    font-size: 15px;
-    line-height: 8px;
+    padding: 16px 0;
   }
   .menu li:hover {
     display: inline-block;
@@ -265,15 +272,23 @@ input[type="checkbox"] {
 
 @media only screen and (width: 768px) {
   .menu {
+    /* display: none; */
+    /* position: absolute; */
+    /* right: -550px; */
+    /* left: 0; */
+    /* text-align: center; */
+    /* padding: 0.2rem 0; */
+    /* z-index: 10; */
+    /* font-size: 18px; */
+    /* line-height: 10px; */
+
     display: none;
     position: absolute;
-    right: -550px;
+    background-color: teal;
+    right: 0;
     left: 0;
     text-align: center;
-    padding: 0.2rem 0;
-    z-index: 10;
-    font-size: 18px;
-    line-height: 10px;
+    padding: 16px 0;
   }
   .menu li:hover {
     display: inline-block;
@@ -362,15 +377,23 @@ input[type="checkbox"] {
 
 @media only screen and (width: 320px) {
   .menu {
+    /* display: none; */
+    /* position: absolute; */
+    /* right: -210px; */
+    /* left: 0; */
+    /* text-align: center; */
+    /* padding: 0.2rem 0; */
+    /* z-index: 10; */
+    /* font-size: 15px; */
+    /* line-height: 8px; */
+
     display: none;
     position: absolute;
-    right: -210px;
+    background-color: teal;
+    right: 0;
     left: 0;
     text-align: center;
-    padding: 0.2rem 0;
-    z-index: 10;
-    font-size: 15px;
-    line-height: 8px;
+    padding: 16px 0;
   }
   .menu li:hover {
     display: inline-block;
@@ -462,15 +485,23 @@ input[type="checkbox"] {
 
 @media only screen and (width: 280px) {
   .menu {
+    /* display: none; */
+    /* position: absolute; */
+    /* right: -210px; */
+    /* left: 0; */
+    /* text-align: center; */
+    /* padding: 0.2rem 0; */
+    /* z-index: 10; */
+    /* font-size: 15px; */
+    /* line-height: 8px; */
+
     display: none;
     position: absolute;
-    right: -210px;
+    background-color: teal;
+    right: 0;
     left: 0;
     text-align: center;
-    padding: 0.2rem 0;
-    z-index: 10;
-    font-size: 15px;
-    line-height: 8px;
+    padding: 16px 0;
   }
   .menu li:hover {
     display: inline-block;
@@ -562,15 +593,23 @@ input[type="checkbox"] {
 
 @media only screen and (width: 540px) {
   .menu {
+    /* display: none; */
+    /* position: absolute; */
+    /* right: -370px; */
+    /* left: 0; */
+    /* text-align: center; */
+    /* padding: 0.2rem 0; */
+    /* z-index: 10; */
+    /* font-size: 15px; */
+    /* line-height: 8px; */
+
     display: none;
     position: absolute;
-    right: -370px;
+    background-color: teal;
+    right: 0;
     left: 0;
     text-align: center;
-    padding: 0.2rem 0;
-    z-index: 10;
-    font-size: 15px;
-    line-height: 8px;
+    padding: 16px 0;
   }
   .menu li:hover {
     display: inline-block;

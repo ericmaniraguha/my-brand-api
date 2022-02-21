@@ -348,14 +348,21 @@ input[type="checkbox"] {
 
 @media screen and  (max-width: 768px) {
   .menu {
+    /* display: none; */
+    /* position: absolute; */
+    /* left: 0; */
+    /* text-align: center; */
+    /* padding: 10px 0; */
+    /* margin-left: 250px; */
+    /* font-size: 18px; */
+    
     display: none;
     position: absolute;
+    background-color: teal;
+    right: 0;
     left: 0;
     text-align: center;
-    padding: 10px 0;
-    margin-left: 250px;
-    font-size: 18px;
-    line-height: 5px;
+    padding: 16px 0;
   }
   .menu li:hover {
     display: inline-block;

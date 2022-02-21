@@ -140,16 +140,24 @@ input[type="checkbox"] {
 @media screen and (max-width: 768px) {
 
   .menu {
+    /* display: none; */
+    /* position: absolute; */
+    /* right: -98px; */
+    /* left: 0; */
+    /* text-align: center; */
+    /* padding: 0.2rem 0; */
+    /* margin-left: 150px; */
+    z-index: 10;
+    /* font-size: 10px; */
+    /* line-height: 3px; */
+
     display: none;
     position: absolute;
-    right: -98px;
+    background-color: teal;
+    right: 0;
     left: 0;
     text-align: center;
-    padding: 0.2rem 0;
-    margin-left: 150px;
-    z-index: 10;
-    font-size: 10px;
-    line-height: 3px;
+    padding: 16px 0;
   }
   .menu li:hover {
     display: inline-block;
@@ -223,16 +231,24 @@ input[type="checkbox"] {
 }
 @media screen and (width: 768px) {
   .menu {
+    /* display: none; */
+    /* position: absolute; */
+    /* right: -27rem; */
+    /* left: 0; */
+    /* text-align: center; */
+    /* padding: 0.2rem 0; */
+    /* margin-left: 70px; */
+    z-index: 10;
+    /* font-size: 18px; */
+    /* line-height: 5px; */
+
     display: none;
     position: absolute;
-    right: -27rem;
+    background-color: teal;
+    right: 0;
     left: 0;
     text-align: center;
-    padding: 0.2rem 0;
-    margin-left: 70px;
-    z-index: 10;
-    font-size: 18px;
-    line-height: 5px;
+    padding: 16px 0;
   }
 
   .menu li + li {
@@ -294,16 +310,25 @@ input[type="checkbox"] {
 
 @media screen and (width: 1024px) {
   .menu {
+    /* display: none; */
+    /* position: absolute; */
+    /* right: -45rem; */
+    /* left: 0; */
+    /* text-align: center; */
+    /* padding: 0.2rem 0; */
+    /* margin-left: 90px; */
+    /* z-index: 10; */
+    /* font-size: 25px; */
+    /* line-height: 8px; */
+
+
     display: none;
     position: absolute;
-    right: -45rem;
+    background-color: teal;
+    right: 0;
     left: 0;
     text-align: center;
-    padding: 0.2rem 0;
-    margin-left: 90px;
-    z-index: 10;
-    font-size: 25px;
-    line-height: 8px;
+    padding: 16px 0;
   }
 
   .menu li + li {

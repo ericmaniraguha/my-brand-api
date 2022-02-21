@@ -205,15 +205,13 @@ input[type=checkbox]{
  /* Querie media */
  @media screen and (max-width: 768px) {
  .menu { 
-  display:none;
+  display: none;
   position: absolute;
-  right: -310px;
+  background-color: teal;
+  right: 0;
   left: 0;
   text-align: center;
   padding: 16px 0;
-  z-index: 1;
-  line-height: 8px;
-  font-size: 12px;
 
  }
  .menu li:hover {
